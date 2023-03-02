@@ -19,7 +19,9 @@ export const FullScreenVideoText: React.FC = () => {
       </video>
       <div className={styles.textWrap}>
         {fullScreenVideoTextMock.map((item: FullScreenVideoTextTypes) => (
-          <div key={item.id} className={item.className}>
+          <div
+            key={item.id}
+            className={`${item.className} ${styles.textBlock}`}>
             <Tween
               to={{
                 x: item.x,
