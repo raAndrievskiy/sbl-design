@@ -1,0 +1,113 @@
+/* VARIABLES */
+$color-white: #F6F6F6;
+$color-black: #141414;
+
+// // ** BREAKPOINTS **
+// $layout-xxxxl-breakpoint: 1921px
+// $layout-xxxl-breakpoint: 1900px
+// $layout-xxl-breakpoint: 1600px
+// $layout-xl-breakpoint: 1440px
+// $layout-lg-breakpoint: 1367px
+// $layout-md-breakpoint: 992px
+// $layout-sm-breakpoint: 720px
+// $layout-xs-breakpoint: 576px
+
+.color-white {
+  color: $color-white;
+}
+
+.color-black {
+  color: $color-black
+}
+
+.text-left {
+  text-align: left;
+} 
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+    
+
+// .color-primary
+//     color: var(--color-primary)
+
+// .bg-light
+//     background-color: var(--color-grey-v3)
+
+// .bg-bright-blue
+//     background: var(--color-bright-blue)
+
+// /* bottom */
+// .mb-1
+//     margin-bottom: calc(1 * var(--offsets-size))
+// .mb-2
+//     margin-bottom: calc(2 * var(--offsets-size))
+// .mb-3
+//     margin-bottom: calc(3 * var(--offsets-size))
+// .mb-4
+//     margin-bottom: calc(4 * var(--offsets-size))
+// .mb-5
+//     margin-bottom: calc(5 * var(--offsets-size))
+// .mb-6
+//     margin-bottom: calc(6 * var(--offsets-size))
+// .mb-7
+//     margin-bottom: calc(7 * var(--offsets-size))
+// .mb-8
+//     margin-bottom: calc(8 * var(--offsets-size))
+// .mb-9
+//     margin-bottom: calc(9 * var(--offsets-size))
+// .mb-10
+//     margin-bottom: calc(10 * var(--offsets-size))
+// .mb-11
+//     margin-bottom: calc(11 * var(--offsets-size))
+// .mb-12
+//     margin-bottom: calc(12 * var(--offsets-size))
+// .mb-12-5
+//     margin-bottom: calc(12.5 * var(--offsets-size))
+// .mb-13
+//     margin-bottom: calc(13 * var(--offsets-size))
+// .mb-14
+//     margin-bottom: calc(14 * var(--offsets-size))
+// .mb-17
+//     margin-bottom: calc(17 * var(--offsets-size))
+// .mb-30
+//     margin-bottom: calc(30 * var(--offsets-size))
+
+// /* right */
+// .me-1
+//     margin-right: calc(1 * var(--offsets-size))
+// .me-2
+//     margin-right: calc(2 * var(--offsets-size))
+// .me-3
+//     margin-right: calc(3 * var(--offsets-size))
+// .me-4
+//     margin-right: calc(4 * var(--offsets-size))
+// .me-5
+//     margin-right: calc(5 * var(--offsets-size))
+// .me-6
+//     margin-right: calc(6 * var(--offsets-size))
+// .me-7
+//     margin-right: calc(7 * var(--offsets-size))
+// .me-8
+//     margin-right: calc(8 * var(--offsets-size))
+// .me-9
+//     margin-right: calc(9 * var(--offsets-size))
+// .me-10
+//     margin-right: calc(10 * var(--offsets-size))
+// .me-11
+//     margin-right: calc(11 * var(--offsets-size))
+// .me-12
+//     margin-right: calc(12 * var(--offsets-size))
+// .me-13
+//     margin-right: calc(13 * var(--offsets-size))
+// .me-14
+//     margin-right: calc(14 * var(--offsets-size))
+// .me-16
+//     margin-right: calc(16 * var(--offsets-size))
+// .me-17
+//     margin-right: calc(17 * var(--offsets-size))

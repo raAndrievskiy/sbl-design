@@ -1,0 +1,28 @@
+@import url(./fonts.scss);
+@import url(./typography.scss);
+@import url(./variables.scss);
+
+input[type="text"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+button { 
+  border: none;
+}
