@@ -77,5 +77,8 @@
   position: relative;
   color: #141414;
   text-transform: uppercase;
-
+  @media screen and (max-width: 1600px) {
+    font-size: 59px;
+    line-height: 72px;
+  }
 }
