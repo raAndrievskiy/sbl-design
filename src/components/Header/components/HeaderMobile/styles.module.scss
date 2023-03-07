@@ -25,7 +25,7 @@
 }
 
 .burger {
-  padding: 20px 8px 20px 40px;
+  padding: 24px 8px 24px 40px;
   height: 100%;
 
   &::before {
@@ -44,6 +44,11 @@
     height: 1px;
     background: #F6F6F6;
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 24px 16px 24px 32px;
+  }
+
 }
 
 
