@@ -1,5 +1,19 @@
+$font-size-xxxl: 3.75vw;
+$font-size-xl: 4.03vw;
+$font-size-lg: 5vw;
+$font-size-sm: 5.6vw;
+$font-size-xs: 5.4vw;
+
+$line-height-xxxl: 4.43vw;
+$line-height-xl: 4.8vw;
+$line-height-lg: 5.8vw;
+$line-height-sm: 6.7vw;
+$line-height-xs: 6.4vw;
+
+
 .main {
   position: relative;
+  margin-bottom: 184px;
 }
 
 .video {
@@ -23,62 +37,147 @@
 .textBlock {
   padding-top: 12px;
   
-    &:nth-of-type(1) {
-      .text {
-        padding-left: 58px;
+  &:nth-of-type(1) {
+    .text {
+      padding-left: 58px;
+      @media screen and (max-width: 1440px) {
+        padding-left: 2.5vw;
       }
+    
+      @media screen and (max-width: 1024px) {
+        padding-left: 3.1vw;
+      }
+    
+      @media screen and (max-width: 768px) {
+        padding-left: 2.1vw;
+      }
+    
     }
-  
-    &:nth-of-type(2) {
-      .text {
-        padding-right: 58px;
+  }
+
+  &:nth-of-type(2) {
+    .text {
+      padding-right: 58px;
+      font-style: italic;
+
+      @media screen and (max-width: 1440px) {
+        padding-right: 3.1vw;
       }
+    
+      @media screen and (max-width: 1024px) {
+        padding-right: 2.5vw;
+      }
+    
+      @media screen and (max-width: 768px) {
+        padding-right: 2.1vw;
+      }
+    
     }
-  
-    &:nth-of-type(3) {
-      .text {
-        padding-left: 58px;
+  }
+
+  &:nth-of-type(3) {
+    .text {
+      padding-left: 58px;
+      font-style: italic;
+
+      @media screen and (max-width: 1440px) {
+        padding-left: 3.1vw;
       }
+    
+      @media screen and (max-width: 1024px) {
+        padding-left: 2.5vw;
+      }
+    
+      @media screen and (max-width: 768px) {
+        padding-left: 2.1vw;
+      }
+    
     }
-  
-    &:nth-of-type(4) {
-      .text {
-        padding-right: 52px;
+  }
+
+  &:nth-of-type(4) {
+    .text {
+      padding-right: 52px;
+
+      @media screen and (max-width: 1440px) {
+        padding-right: 0;
+        padding-left: 3vw;
       }
+    
+      @media screen and (max-width: 1024px) {
+        padding-left: 0;
+        padding-right: 15vw;
+      }
+    
+      @media screen and (max-width: 768px) {
+        padding-right: 20vw;
+      }
+    
     }
-  
-    &:nth-of-type(5) {
-      .text {
-        padding-right: 422px;
+  }
+
+  &:nth-of-type(5) {
+    .text {
+      padding-right: 22vw;
+
+      @media screen and (max-width: 1440px) {
+        padding-right: 18vw;
       }
+    
+      @media screen and (max-width: 1024px) {
+        padding-right: 40vw;
+      }
+    
+      @media screen and (max-width: 768px) {
+        padding-right: 49vw;
+      }
+
     }
+  }
+
+  @media screen and (max-width: 1440px) {
+    padding-top: 14px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding-top: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 4px;
+  }
+
+  @media screen and (max-width: 375px) {
+    padding-top: 8px;
+  }
   
-    @media screen and (max-width: 1600px) {
-      font-size: 59px;
-      line-height: 72px;
-  
-      &:nth-of-type(4) {
-        .text {
-          padding-right: 64px;
-        }
-      }
-  
-      &:nth-of-type(5) {
-        .text {
-          padding-right: 366px;
-        }
-      }
-    }
 }
 
 .text {
-  font-size: 72px;
-  line-height: 85px;
+  font-size: $font-size-xxxl;
+  line-height: $line-height-xxxl;
   position: relative;
   color: #141414;
   text-transform: uppercase;
-  @media screen and (max-width: 1600px) {
-    font-size: 59px;
-    line-height: 72px;
+  
+  @media screen and (max-width: 1440px) {
+    font-size: $font-size-xl;
+    line-height: $line-height-xl;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: $font-size-lg;
+    line-height: $line-height-lg;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+    font-weight: 250;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: $font-size-xs;
+    line-height: $line-height-xs;
   }
 }

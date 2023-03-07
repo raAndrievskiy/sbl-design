@@ -1,0 +1,55 @@
+.bubbles {
+  height: 100vh;
+}
+
+.bubblesIconWrap {
+  position: relative;
+}
+
+.bubblesIcon {
+  margin-top: 140px;
+  transform-origin: bottom;
+  overflow: visible;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  mix-blend-mode: difference;
+  // path {
+  //   fill: #f6f6f6;
+  // }
+  
+}
+
+.bubblesBg {
+  position: absolute;
+  bottom: -10px;
+  left: -58px;
+  display: block;
+  width: 100vw;
+  height: 50%;
+  background: #141414;
+}
+
+.circle {
+  mix-blend-mode: difference;
+  circle {
+    // stroke: #f6f6f6;
+    // stroke: #141414;
+    stroke-dashoffset: 1505px;
+    stroke-dasharray: 1505px;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+  }
+}
+// .bubblesIconWrap {
+//   position: relative;
+
+//   .bubblesIcon {
+//     g {
+//       path, circle {
+//         mix-blend-mode: difference;
+//         fill: #F6F6F6;
+//     }
+//    }
+//   }
+// }

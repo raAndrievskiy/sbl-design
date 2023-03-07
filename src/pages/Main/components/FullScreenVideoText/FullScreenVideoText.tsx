@@ -4,9 +4,9 @@ import { Tween } from 'react-gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 import { Line } from '../../../../components'
-import video from '../../../../assets/video/lines.mp4'
 import { fullScreenVideoTextMock } from './fullScreenVideoTextMock'
 import { FullScreenVideoTextTypes } from './fullScreenVideoTextTypes'
+import video from '../../../../assets/video/lines.mp4'
 import styles from './styles.module.scss'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -38,63 +38,6 @@ export const FullScreenVideoText: React.FC = () => {
             <Line />
           </div>
         ))}
-
-        {/* <Tween
-          to={{
-            x: '10%',
-            scrollTrigger: {
-              trigger: `${styles.main}`,
-              start: '0px 0px',
-              end: '70% 50%',
-              scrub: 0.5,
-              // markers: true,
-            },
-          }}>
-          <p className={styles.text}>— уникальная атмосфера</p>
-        </Tween>
-        <Line />
-        <Tween
-          to={{
-            x: '-20%',
-            scrollTrigger: {
-              trigger: `${styles.main}`,
-              start: '0px 0px',
-              end: '70% 50%',
-              scrub: 0.5,
-              // markers: true,
-            },
-          }}>
-          <p className={styles.text}>и комфорт, путем</p>
-        </Tween>
-        <Line />
-        <Tween
-          to={{
-            x: '20%',
-            scrollTrigger: {
-              trigger: `${styles.main}`,
-              start: '0px 0px',
-              end: '70% 50%',
-              scrub: 0.5,
-              // markers: true,
-            },
-          }}>
-          <p className={styles.text}>индивидуальных</p>
-        </Tween>
-        <Line />
-        <Tween
-          to={{
-            x: '10%',
-            scrollTrigger: {
-              trigger: `${styles.main}`,
-              start: '0px 0px',
-              end: '70% 50%',
-              scrub: 0.5,
-              // markers: true,
-            },
-          }}>
-          <p className={styles.text}>решений</p>
-        </Tween>
-        <Line /> */}
       </div>
     </div>
   )

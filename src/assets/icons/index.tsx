@@ -1,3 +1,5 @@
 import { Logo } from './Logo'
 
-export { Logo }
+import { BubblesIcon } from './BubblesIcon'
+
+export { Logo, BubblesIcon }
