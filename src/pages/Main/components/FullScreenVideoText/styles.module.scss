@@ -11,6 +11,18 @@ $line-height-sm: 6.7vw;
 $line-height-xs: 6.4vw;
 
 
+// @media screen and (max-width: 1440px) {
+
+// }
+
+// @media screen and (max-width: 1024px) {
+
+// }
+
+// @media screen and (max-width: 768px) {
+  
+// }
+
 .main {
   position: relative;
   margin-bottom: 184px;
@@ -25,13 +37,30 @@ $line-height-xs: 6.4vw;
 .textWrap {
   position: absolute;
   left: 0;
-  bottom: 76px;
+  bottom: 64px;
   width: 100%;
-  height: calc(100vh - 76px);
+  height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
+
+  @media screen and (max-width: 1440px) {
+    bottom: 96px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    bottom: 56px;
+  }
+
+  @media screen and (max-width: 768px) {
+    bottom: 72px;
+  }
+
+  @media screen and (max-width: 375px) {
+    bottom: 128px;
+  }
+
 }
 
 .textBlock {
