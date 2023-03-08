@@ -10,9 +10,11 @@ export const HeaderMobile: React.FC = () => {
     <header className={styles.headerWrap}>
       <Container>
         <div className={styles.header}>
-          <NavLink to="/" className={styles.logo}>
-            <Logo width={120} height={23} />
-          </NavLink>
+          <div className={styles.logoWrap}>
+            <NavLink to="/" className={styles.logo}>
+              <Logo width={120} height={23} />
+            </NavLink>
+          </div>
           <div className={styles.burgerWrap}>
             <div className={styles.burger} />
             {/* <NavLink to="/" className={`${styles.link} color-white`}>
