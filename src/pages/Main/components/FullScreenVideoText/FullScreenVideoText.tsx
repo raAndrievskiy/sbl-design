@@ -26,7 +26,6 @@ export const FullScreenVideoText: React.FC = () => {
               to={{
                 x: item.x,
                 scrollTrigger: {
-                  // trigger: `${styles.main}`,
                   start: '0px 0px',
                   end: '70% 50%',
                   scrub: 0.5,

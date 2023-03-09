@@ -3,7 +3,7 @@ import gsap from 'gsap'
 import { Tween } from 'react-gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-import { BubblesIcon } from '../../../../assets/icons/'
+import { BubblesIcon } from '../../../../assets/icons'
 import { Container } from '../../../../components'
 import styles from './styles.module.scss'
 
@@ -18,23 +18,32 @@ export const Bubbles: React.FC = () => {
           вниманием к процессу не ожидая ничего взамен.
         </span>
         <div className={styles.bubblesIconWrap}>
-          {/* <Tween
+          <Tween
             to={{
-              y: '-10%',
+              // y: '10%',
+              // paddingBottom: '100px',
               scrollTrigger: {
-                trigger: `${styles.bubbles}`,
-                start: '0px 0px',
+                start: '1300vh 100vh',
                 end: '100% 100%',
                 scrub: true,
-                markers: true,
+                // markers: true,
               },
             }}>
-            <BubblesIcon
-              className={styles.bubblesIcon}
-              classNameCircle={styles.circle}
-            />
-          </Tween> */}
-          <div className={styles.bubblesBg} />
+            <BubblesIcon className={styles.bubblesIcon} />
+          </Tween>
+          <Tween
+            to={{
+              scale: 2.5,
+              // height: '100%',
+              scrollTrigger: {
+                start: '1000vh 100vh',
+                end: '100% 100%',
+                scrub: true,
+                // markers: true,
+              },
+            }}>
+            <div className={styles.bubblesBg} />
+          </Tween>
         </div>
       </Container>
     </div>

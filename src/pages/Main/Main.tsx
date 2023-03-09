@@ -1,12 +1,13 @@
 import React from 'react'
 
-import { FullScreenVideoText, Bubbles } from './components'
+import { FullScreenVideoText, Bubbles, About } from './components'
 
 export const Main: React.FC = () => {
   return (
     <>
       <FullScreenVideoText />
       <Bubbles />
+      <About />
     </>
   )
 }

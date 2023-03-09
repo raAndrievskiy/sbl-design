@@ -1,5 +1,9 @@
 .bubbles {
-  height: 100vh;
+  position: relative;
+  height: auto;
+  background: #F6F6F6;
+  overflow: hidden;
+  min-height: 100vh;
 }
 
 .bubblesIconWrap {
@@ -13,11 +17,7 @@
   width: 100%;
   position: relative;
   z-index: 9;
-  mix-blend-mode: difference;
-  // path {
-  //   fill: #f6f6f6;
-  // }
-  
+  mix-blend-mode: difference;  
 }
 
 .bubblesBg {
@@ -27,29 +27,6 @@
   display: block;
   width: 100vw;
   height: 50%;
+  // z-index: 1;
   background: #141414;
 }
-
-.circle {
-  mix-blend-mode: difference;
-  circle {
-    // stroke: #f6f6f6;
-    // stroke: #141414;
-    stroke-dashoffset: 1505px;
-    stroke-dasharray: 1505px;
-    -webkit-transition: 0.9s;
-    transition: 0.9s;
-  }
-}
-// .bubblesIconWrap {
-//   position: relative;
-
-//   .bubblesIcon {
-//     g {
-//       path, circle {
-//         mix-blend-mode: difference;
-//         fill: #F6F6F6;
-//     }
-//    }
-//   }
-// }
