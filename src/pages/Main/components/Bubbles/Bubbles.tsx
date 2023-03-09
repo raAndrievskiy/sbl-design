@@ -18,7 +18,7 @@ export const Bubbles: React.FC = () => {
           вниманием к процессу не ожидая ничего взамен.
         </span>
         <div className={styles.bubblesIconWrap}>
-          <Tween
+          {/* <Tween
             to={{
               // y: '10%',
               // paddingBottom: '100px',
@@ -28,9 +28,9 @@ export const Bubbles: React.FC = () => {
                 scrub: true,
                 // markers: true,
               },
-            }}>
-            <BubblesIcon className={styles.bubblesIcon} />
-          </Tween>
+            }}> */}
+          <BubblesIcon className={styles.bubblesIcon} />
+          {/* </Tween> */}
           <Tween
             to={{
               scale: 2.5,
