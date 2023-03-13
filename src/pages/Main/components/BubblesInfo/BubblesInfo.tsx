@@ -24,10 +24,13 @@ export const BubblesInfo: React.FC = () => {
               scale: 2.5,
               // height: '100%',
               scrollTrigger: {
-                start: '1000vh 100vh',
-                end: '100% 100%',
+                trigger: '.bubblesTrigger',
+                start: 'top top',
+                end: 'bottom top',
+                // start: '882vh 100vh',
+                // end: '80% 100%',
                 scrub: 2,
-                // markers: true,
+                markers: true,
               },
             }}>
             <div className={styles.bubblesBg} />
