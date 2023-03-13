@@ -28,8 +28,7 @@ export const FullScreenVideoText: React.FC = () => {
                 scrollTrigger: {
                   start: '0px 0px',
                   end: '70% 50%',
-                  scrub: 0.5,
-                  // markers: true,
+                  scrub: 2,
                 },
               }}>
               <p className={styles.text}>{item.text}</p>

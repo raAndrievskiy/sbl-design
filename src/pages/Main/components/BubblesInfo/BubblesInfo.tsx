@@ -3,13 +3,13 @@ import gsap from 'gsap'
 import { Tween } from 'react-gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-import { BubblesIcon } from '../../../../assets/icons'
+import { BubblesIcon } from './BubblesIcon'
 import { Container } from '../../../../components'
 import styles from './styles.module.scss'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export const Bubbles: React.FC = () => {
+export const BubblesInfo: React.FC = () => {
   return (
     <div className={styles.bubbles}>
       <Container>
