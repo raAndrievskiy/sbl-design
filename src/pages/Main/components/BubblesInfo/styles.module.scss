@@ -6,18 +6,27 @@
   min-height: 100vh;
 }
 
+.bubblesDescription {
+  margin-bottom: 140px;
+  display: block;
+}
+
 .bubblesIconWrap {
   position: relative;
 }
 
 .bubblesIcon {
-  margin-top: 140px;
   transform-origin: bottom;
   overflow: visible;
   width: 100%;
   position: relative;
   z-index: 9;
   mix-blend-mode: difference;  
+
+  circle {
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+  }
 }
 
 .bubblesBg {
@@ -27,6 +36,5 @@
   display: block;
   width: 100vw;
   height: 50%;
-  // z-index: 1;
   background: #141414;
 }
