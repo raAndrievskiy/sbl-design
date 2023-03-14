@@ -30,10 +30,10 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
             yPercent: 0,
             xPercent: -10,
             scrollTrigger: {
-              start: '882vh 100vh',
-              end: '73% 100%',
+              start: '850vh 100vh',
+              end: '80% 100%',
               scrub: 2,
-              markers: true,
+              // markers: true,
             },
           }}>
           <g data-svg-origin="0.5 0.5">
@@ -52,10 +52,10 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
               to={{
                 strokeDashoffset: '',
                 scrollTrigger: {
-                  start: '882vh 100vh',
-                  end: '73% 100%',
-                  scrub: true,
-                  markers: true,
+                  start: '850vh 100vh',
+                  end: '80% 100%',
+                  scrub: 0.8,
+                  // markers: true,
                 },
               }}>
               <circle
@@ -78,10 +78,10 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
             yPercent: 0,
             xPercent: -10,
             scrollTrigger: {
-              start: '882vh 100vh',
-              end: '73% 100%',
+              start: '850vh 100vh',
+              end: '80% 100%',
               scrub: 2,
-              markers: true,
+              // markers: true,
             },
           }}>
           <g data-svg-origin="338.5 409.5">
@@ -100,8 +100,8 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
               to={{
                 strokeDashoffset: '',
                 scrollTrigger: {
-                  start: '882vh 100vh',
-                  end: '73% 100%',
+                  start: '850vh 100vh',
+                  end: '80% 100%',
                   scrub: true,
                 },
               }}>
@@ -118,17 +118,17 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
 
         <Tween
           from={{
-            yPercent: -30,
+            yPercent: -20,
             xPercent: 20,
           }}
           to={{
             yPercent: 0,
             xPercent: -10,
             scrollTrigger: {
-              start: '882vh 100vh',
-              end: '73% 100%',
+              start: '850vh 100vh',
+              end: '80% 100%',
               scrub: 2,
-              markers: true,
+              // markers: true,
             },
           }}>
           <g data-svg-origin="767.5 153.5">
@@ -147,9 +147,9 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
               to={{
                 strokeDashoffset: '',
                 scrollTrigger: {
-                  start: '884vh 100vh',
-                  end: '73% 100%',
-                  scrub: true,
+                  start: '850vh 100vh',
+                  end: '80% 100%',
+                  scrub: 1,
                 },
               }}>
               <circle
@@ -172,10 +172,10 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
             yPercent: 0,
             xPercent: -10,
             scrollTrigger: {
-              start: '882vh 100vh',
-              end: '73% 100%',
+              start: '850vh 100vh',
+              end: '80% 100%',
               scrub: 2,
-              markers: true,
+              // markers: true,
             },
           }}>
           <g data-svg-origin="557.5 116.5">
@@ -186,9 +186,9 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
               to={{
                 strokeDashoffset: '',
                 scrollTrigger: {
-                  start: '883vh 100vh',
-                  end: '73% 100%',
-                  scrub: true,
+                  start: '850vh 100vh',
+                  end: '80% 100%',
+                  scrub: 0.9,
                 },
               }}>
               <circle

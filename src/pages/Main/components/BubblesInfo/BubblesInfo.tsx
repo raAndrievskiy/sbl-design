@@ -22,15 +22,11 @@ export const BubblesInfo: React.FC = () => {
           <Tween
             to={{
               scale: 2.5,
-              // height: '100%',
               scrollTrigger: {
-                trigger: '.bubblesTrigger',
-                start: 'top top',
-                end: 'bottom top',
-                // start: '882vh 100vh',
-                // end: '80% 100%',
+                start: '850vh 100vh',
+                end: '75% 100%',
                 scrub: 2,
-                markers: true,
+                // markers: true,
               },
             }}>
             <div className={styles.bubblesBg} />
