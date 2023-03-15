@@ -1,0 +1,59 @@
+.aboutWrap {
+  padding-top: 172px;
+  padding-bottom: 323px;
+  background: #282728;
+}
+
+.about {
+  position: relative;
+  z-index: 1;
+}
+
+.circleTurquoise {
+  width: 91.6vw;
+  height: 91.6vw;
+  border-radius: 50%;
+  background: #054d5c;
+  padding-top: 172px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.aboutTitle {
+  max-width: 1053px;
+
+  @media screen and (max-width: 1440px) {
+    max-width: 851px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    max-width: 737px;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 630px;
+  }
+
+  @media screen and (max-width: 375px) {
+    max-width: 100%;
+  }
+}
+
+.aboutDescription {
+  margin-left: auto;
+  padding-top: 192px;
+  padding-bottom: 42vh;
+}
+
+.typeElevator {
+
+}
+
+.elevator {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 32px 0 64px;
+}

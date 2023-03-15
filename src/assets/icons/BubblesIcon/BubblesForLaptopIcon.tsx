@@ -36,8 +36,8 @@ export const BubblesForLaptop = React.forwardRef<SVGSVGElement, IconProps>(
             yPercent: 0,
             xPercent: -10,
             scrollTrigger: {
-              start: '882vh 100vh',
-              end: '100% 100%',
+              start: '850vh 100vh',
+              end: '80% 100%',
               scrub: 2,
               markers: true,
             },
@@ -63,8 +63,8 @@ export const BubblesForLaptop = React.forwardRef<SVGSVGElement, IconProps>(
             yPercent: 0,
             xPercent: -10,
             scrollTrigger: {
-              start: '882vh 100vh',
-              end: '100% 100%',
+              start: '850vh 100vh',
+              end: '80% 100%',
               scrub: 2,
               markers: true,
             },
@@ -91,8 +91,8 @@ export const BubblesForLaptop = React.forwardRef<SVGSVGElement, IconProps>(
             yPercent: 0,
             xPercent: -10,
             scrollTrigger: {
-              start: '882vh 100vh',
-              end: '100% 100%',
+              start: '850vh 100vh',
+              end: '80% 100%',
               scrub: 2,
               markers: true,
             },
@@ -119,8 +119,8 @@ export const BubblesForLaptop = React.forwardRef<SVGSVGElement, IconProps>(
             yPercent: 0,
             xPercent: -10,
             scrollTrigger: {
-              start: '882vh 100vh',
-              end: '100% 100%',
+              start: '850vh 100vh',
+              end: '80% 100%',
               scrub: 2,
               markers: true,
             },

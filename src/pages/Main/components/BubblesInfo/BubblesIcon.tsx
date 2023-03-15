@@ -16,7 +16,7 @@ export const BubblesIcon: React.FC<BubblesType> = ({ className }) => {
   const [width] = useWindowSize()
 
   const Bubbles = () => {
-    if (width > 1024) {
+    if (width >= 1024) {
       return <BubblesForDesktop className={className} />
     } else if (width > 768 && width < 1024) {
       return <BubblesForLaptop className={className} />

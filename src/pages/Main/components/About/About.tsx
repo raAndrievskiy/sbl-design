@@ -1,22 +1,47 @@
 import React from 'react'
 
+import { aboutMock } from './aboutMock'
+import { Container, LineWhite } from '../../../../components'
 import styles from './styles.module.scss'
 
 export const About: React.FC = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        paddingTop: '172px',
-        background: '#141414',
-        position: 'relative',
-        zIndex: '-1',
-      }}
-    />
+    <div className={styles.aboutWrap}>
+      <Container>
+        <div className={styles.about}>
+          <div className={styles.circleTurquoise} />
+          <h3 className={`h3 ${styles.aboutTitle}`}>
+            Мы знаем как воплатить вашу идею в жизнь
+          </h3>
+          <LineWhite />
+          <span
+            className={`description color-white ${styles.aboutDescription}`}>
+            Разрабатывая подобные идеи ты входишь в них с головой и со всем
+            вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные
+            идеи ты входишь в них с головой и со всем вниманием к процессу не
+            ожидая ничего взамен.
+          </span>
+          <div className={styles.typeElevator}>
+            <LineWhite />
+            <div className={styles.elevator}>
+              <span className="color-white elevator-name">Premium</span>
+              <span className="color-white elevator-description">
+                Разрабатывая подобные идеи ты входишь в них с головой и со всем
+                вниманием к процессу не ожидая ничего взамен.
+              </span>
+            </div>
+            <LineWhite />
+            <div className={styles.elevator}>
+              <span className="color-white elevator-name">Special</span>
+              <span className="color-white elevator-description">
+                Разрабатывая подобные идеи ты входишь в них с головой и со всем
+                вниманием к процессу не ожидая ничего взамен.
+              </span>
+            </div>
+            <LineWhite />
+          </div>
+        </div>
+      </Container>
+    </div>
   )
 }
-
-/*
-  1 bubble: from: matrix(1,0,0,1,95.8,-239.5), to: matrix(1,0,0,1,-47.9,0)
-
-*/

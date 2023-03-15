@@ -1,29 +1,29 @@
 .description {
   display: block;
-  font-weight: 300;
-  font-size: 3vw;
-  line-height: 3.6vw;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
   max-width: 892px;
   
   @media screen and (max-width: 1440px) {
-    font-size: 40px;
-    line-height: 47px;
-    max-width: 714px;
+    font-size: 32px;
+    line-height: 38px;
+    max-width: 665px;
   }
   
   @media screen and (max-width: 1024px) {
-    max-width: 606px;
+    max-width: 491px;
+    font-size: 28px;
+    line-height: 33px;
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 4.17vw;
-    line-height: 4.95vw;
+    font-size: 24px;
+    line-height: 28px;
     max-width: 469px;
   }
 
   @media screen and (max-width: 375px) {
-    font-size: 26px;
-    line-height: 31px;
     max-width: 326px;
   }
 }
@@ -38,4 +38,83 @@
 
 .text-right {
   text-align: right;
+}
+
+.h3 {
+  font-family: Mazzard;
+  font-weight: 400;
+  font-size: 3.75vw;
+  line-height: 4.43vw;
+  text-transform: uppercase;
+  color: #F6F6F6;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 4.03vw;
+    line-height: 4.8vw;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 4.89vw;
+    line-height: 5.77vw;
+  }
+  
+  @media screen and (max-width: 768px) {
+    font-size: 5.6vw;
+    line-height: 6.65vw;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+.elevator-name {
+  font-size: 40px;
+  line-height: 47px;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.elevator-description {
+  font-size: 24px;
+  line-height: 28px;
+  max-width: 892px;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 24px;
+    line-height: 28px;
+    max-width: 665px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 491px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 343px;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 100%;
+  }
 }
