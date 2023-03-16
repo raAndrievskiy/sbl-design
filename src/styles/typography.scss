@@ -83,9 +83,10 @@
     line-height: 28px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 525px) {
     font-size: 32px;
     line-height: 38px;
+    padding-bottom: 24px;
   }
 }
 
@@ -112,7 +113,7 @@
     max-width: 343px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 525px) {
     font-size: 20px;
     line-height: 24px;
     max-width: 100%;

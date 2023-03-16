@@ -1,18 +1,50 @@
 import React from 'react'
+import gsap from 'gsap'
+import { Tween, Reveal } from 'react-gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-import { aboutMock } from './aboutMock'
 import { Container, LineWhite } from '../../../../components'
+import useWindowSize from '../../../../hook/useWindowSize'
 import styles from './styles.module.scss'
 
+gsap.registerPlugin(ScrollTrigger)
+
 export const About: React.FC = () => {
+  const [width] = useWindowSize()
+
   return (
-    <div className={styles.aboutWrap}>
+    <div className={`${styles.aboutWrap} aboutTrigger`}>
       <Container>
         <div className={styles.about}>
-          <div className={styles.circleTurquoise} />
-          <h3 className={`h3 ${styles.aboutTitle}`}>
-            Мы знаем как воплатить вашу идею в жизнь
-          </h3>
+          <Tween
+            to={{
+              top: width <= 525 ? '50%' : '0px',
+              scrollTrigger: {
+                trigger: '.aboutTrigger',
+                start: 'top 10%',
+                end: 'bottom bottom',
+                scrub: width <= 525 ? 6 : 2,
+              },
+            }}>
+            <div className={styles.circleTurquoise} />
+          </Tween>
+          <Reveal repeat>
+            <Tween
+              to={{
+                opacity: 1,
+                paddingTop: 0,
+                scrollTrigger: {
+                  trigger: '.aboutTrigger',
+                  start: 'top 10%',
+                  end: 'bottom bottom',
+                  scrub: width <= 525 ? 6 : 2,
+                },
+              }}>
+              <h3 className={`h3 ${styles.aboutTitle}`}>
+                Мы знаем как воплатить вашу идею в жизнь
+              </h3>
+            </Tween>
+          </Reveal>
           <LineWhite />
           <span
             className={`description color-white ${styles.aboutDescription}`}>

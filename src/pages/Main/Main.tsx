@@ -1,6 +1,11 @@
 import React from 'react'
 
-import { FullScreenVideoText, BubblesInfo, About } from './components'
+import {
+  FullScreenVideoText,
+  BubblesInfo,
+  About,
+  Portfolio,
+} from './components'
 
 export const Main: React.FC = () => {
   return (
@@ -8,6 +13,7 @@ export const Main: React.FC = () => {
       <FullScreenVideoText />
       <BubblesInfo />
       <About />
+      <Portfolio />
     </>
   )
 }

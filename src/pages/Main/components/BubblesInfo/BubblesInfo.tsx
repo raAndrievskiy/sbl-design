@@ -5,8 +5,8 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 import { BubblesIcon } from './BubblesIcon'
 import { Container } from '../../../../components'
-import styles from './styles.module.scss'
 import useWindowSize from '../../../../hook/useWindowSize'
+import styles from './styles.module.scss'
 
 gsap.registerPlugin(ScrollTrigger)
 
