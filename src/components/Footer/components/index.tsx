@@ -1,5 +1,4 @@
 import { Info } from './Info/Info'
-import { Mail } from './Mail/Mail'
-import { Phone } from './Phone/Phone'
+import { Contacts } from './Contacts/Contacts'
 
-export { Info, Mail, Phone }
+export { Info, Contacts }

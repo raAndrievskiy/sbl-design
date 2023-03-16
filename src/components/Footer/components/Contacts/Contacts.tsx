@@ -6,12 +6,12 @@ import { LineWhite } from '../../../LineWhite/LineWhite'
 
 import styles from './styles.module.scss'
 
-export const Mail: React.FC = () => {
+export const Contacts: React.FC = () => {
   return (
     <>
       <LineWhite />
       <div className={styles.footerMail}>
-        <ArrowsIcon width={556} height={76} />
+        <ArrowsIcon className={styles.arrowIcon} />
         <Link
           to="#"
           className={styles.mail}
@@ -23,6 +23,15 @@ export const Mail: React.FC = () => {
         </Link>
       </div>
       <LineWhite />
+      <div className={styles.phone}>
+        <a
+          href="tel:+74951509091"
+          className={`${styles.phoneLink} color-white`}>
+          8 (495) 150-90-91
+        </a>
+      </div>
+      <LineWhite />
+      <span className={`${styles.copyright} color-white`}>© 2023</span>
     </>
   )
 }

@@ -14,7 +14,6 @@ export const LineWhite: React.FC = () => {
         to={{
           width: '100%',
           scrollTrigger: {
-            trigger: '.aboutTrigger',
             start: 'top 10%',
             end: 'bottom bottom',
           },

@@ -1,0 +1,108 @@
+.footerMail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+
+  @media screen and (max-width: 375px) {
+    justify-content: flex-end;
+  }
+}
+
+.arrowIcon {
+  width: 556px;
+  height: 76px;
+
+  @media screen and (max-width: 1440px) {
+    width: 252px;
+    height: 36px;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mail {
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 85px;
+  text-transform: uppercase;
+  color: #F6F6F6;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 58px;
+    line-height: 69px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    font-size: 4.9vw;
+    line-height: 5.8vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 5.6vw;
+    line-height: 6.7vw;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.phone {
+  padding-top: 12px;
+
+  @media screen and (max-width: 375px) {
+    padding: 16px 0;
+  }
+}
+
+.phoneLink {
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 85px;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 58px;
+    line-height: 69px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 4.9vw;
+    line-height: 5.8vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 5.6vw;
+    line-height: 6.7vw;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.copyright {
+  display: block;
+  padding-top: 40px;
+  
+  @media screen and (max-width: 375px) {
+    padding-top: 16px;
+  }
+}
+
+
+/*
+
+@media screen and (max-width: 1440px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 375px) {}
+
+*/

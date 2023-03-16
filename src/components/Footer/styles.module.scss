@@ -1,25 +1,8 @@
 .footer {
   background: #282728;
-  padding: 88px 0 40px;
+  padding: 0 0 40px;
+
+  @media screen and (max-width: 375px) {
+    padding: 0 0 24px;
+  }
 }
-
-
-/* 
-
-@media screen and (max-width: 1440px) {
-
-}
-
-@media screen and (max-width: 1024px) {
-
-}
-
-@media screen and (max-width: 768px) {
-
-}
-
-@media screen and (max-width: 525px) {
-
-}
-
-*/
