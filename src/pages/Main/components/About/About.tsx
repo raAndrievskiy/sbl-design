@@ -37,7 +37,7 @@ export const About: React.FC = () => {
                   trigger: '.aboutTrigger',
                   start: 'top 10%',
                   end: 'bottom bottom',
-                  scrub: width <= 525 ? 6 : 2,
+                  scrub: true,
                 },
               }}>
               <h3 className={`h3 ${styles.aboutTitle}`}>
@@ -64,7 +64,6 @@ export const About: React.FC = () => {
                       trigger: '.aboutTrigger',
                       start: 'top 10%',
                       end: 'bottom bottom',
-                      scrub: width <= 525 ? 6 : 2,
                     },
                   }}>
                   <span className="color-white elevator-name">Premium</span>
@@ -85,7 +84,6 @@ export const About: React.FC = () => {
                       trigger: '.aboutTrigger',
                       start: 'top 10%',
                       end: 'bottom bottom',
-                      scrub: width <= 525 ? 6 : 2,
                     },
                   }}>
                   <span className="color-white elevator-name">Special</span>

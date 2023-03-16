@@ -6,11 +6,16 @@ type LocationDataType = {
 
 type LinkDataType = {
   id: number
-  link: string
+  navLink: string
+  to: string
 }
 
 export const locationData: LocationDataType[] = [
-  { id: 1, label: 'Офис', address: 'г. Москва, Проезд Северный, д. 12' },
+  {
+    id: 1,
+    label: 'Офис',
+    address: 'г. Москва, Проезд Северный, д. 12',
+  },
   {
     id: 2,
     label: 'Производство',
@@ -19,8 +24,8 @@ export const locationData: LocationDataType[] = [
 ]
 
 export const navLinkData: LinkDataType[] = [
-  { id: 1, link: 'Premium' },
-  { id: 2, link: 'Special' },
-  { id: 3, link: 'О компании' },
-  { id: 4, link: 'Контакты' },
+  { id: 1, navLink: 'Premium', to: '/' },
+  { id: 2, navLink: 'Special', to: '/' },
+  { id: 3, navLink: 'О компании', to: '/' },
+  { id: 4, navLink: 'Контакты', to: '/' },
 ]

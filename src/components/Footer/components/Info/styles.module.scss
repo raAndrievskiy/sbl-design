@@ -1,0 +1,69 @@
+.footerInfo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 176px;
+}
+
+.locations {
+  
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  width: 204px;
+
+  &:nth-child(1) {
+    padding-bottom: 32px;
+  }
+}
+
+.locationLabel {
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+}
+
+.locationAddress {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.navLink {
+  display: flex;
+  flex-direction: column;
+  padding-left: 252px;
+}
+
+.link {
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    padding-bottom: 25px;
+  }
+}
+
+
+/* 
+
+@media screen and (max-width: 1440px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 525px) {
+
+}
+
+*/
