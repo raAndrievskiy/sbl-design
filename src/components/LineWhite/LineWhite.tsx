@@ -17,7 +17,6 @@ export const LineWhite: React.FC = () => {
             trigger: '.aboutTrigger',
             start: 'top 10%',
             end: 'bottom bottom',
-            // markers: true,
           },
         }}>
         <div className={`${styles.lineWhite} lineTrigger`} />

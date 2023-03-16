@@ -33,7 +33,6 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
               start: '850vh 100vh',
               end: '80% 100%',
               scrub: 2,
-              // markers: true,
             },
           }}>
           <g data-svg-origin="0.5 0.5">
@@ -55,7 +54,6 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
                   start: '850vh 100vh',
                   end: '80% 100%',
                   scrub: 0.8,
-                  // markers: true,
                 },
               }}>
               <circle
@@ -81,7 +79,6 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
               start: '850vh 100vh',
               end: '80% 100%',
               scrub: 2,
-              // markers: true,
             },
           }}>
           <g data-svg-origin="338.5 409.5">
@@ -128,7 +125,6 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
               start: '850vh 100vh',
               end: '80% 100%',
               scrub: 2,
-              // markers: true,
             },
           }}>
           <g data-svg-origin="767.5 153.5">
@@ -175,7 +171,6 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
               start: '850vh 100vh',
               end: '80% 100%',
               scrub: 2,
-              // markers: true,
             },
           }}>
           <g data-svg-origin="557.5 116.5">

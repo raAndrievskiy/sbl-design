@@ -30,7 +30,6 @@ export const BubblesInfo: React.FC = () => {
                 start: '850vh 100vh',
                 end: '75% 100%',
                 scrub: 2,
-                // markers: true,
               },
             }}>
             <div className={styles.bubblesBg} />
