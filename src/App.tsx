@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Header } from './components'
+import { Footer, Header } from './components'
 
 import { Main, Premium, Special, AboutCompany } from './pages'
 
@@ -14,6 +14,7 @@ const App = () => {
         <Route path="/special" element={<Special />} />
         <Route path="/company" element={<AboutCompany />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

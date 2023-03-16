@@ -53,25 +53,51 @@ export const About: React.FC = () => {
             идеи ты входишь в них с головой и со всем вниманием к процессу не
             ожидая ничего взамен.
           </span>
-          <div className={styles.typeElevator}>
+          <>
             <LineWhite />
             <div className={styles.elevator}>
-              <span className="color-white elevator-name">Premium</span>
-              <span className="color-white elevator-description">
-                Разрабатывая подобные идеи ты входишь в них с головой и со всем
-                вниманием к процессу не ожидая ничего взамен.
-              </span>
+              <Reveal repeat>
+                <Tween
+                  to={{
+                    opacity: 1,
+                    scrollTrigger: {
+                      trigger: '.aboutTrigger',
+                      start: 'top 10%',
+                      end: 'bottom bottom',
+                      scrub: width <= 525 ? 6 : 2,
+                    },
+                  }}>
+                  <span className="color-white elevator-name">Premium</span>
+                  <span className="color-white elevator-description">
+                    Разрабатывая подобные идеи ты входишь в них с головой и со
+                    всем вниманием к процессу не ожидая ничего взамен.
+                  </span>
+                </Tween>
+              </Reveal>
             </div>
             <LineWhite />
             <div className={styles.elevator}>
-              <span className="color-white elevator-name">Special</span>
-              <span className="color-white elevator-description">
-                Разрабатывая подобные идеи ты входишь в них с головой и со всем
-                вниманием к процессу не ожидая ничего взамен.
-              </span>
+              <Reveal repeat>
+                <Tween
+                  to={{
+                    opacity: 1,
+                    scrollTrigger: {
+                      trigger: '.aboutTrigger',
+                      start: 'top 10%',
+                      end: 'bottom bottom',
+                      scrub: width <= 525 ? 6 : 2,
+                    },
+                  }}>
+                  <span className="color-white elevator-name">Special</span>
+                  <span className="color-white elevator-description">
+                    Разрабатывая подобные идеи ты входишь в них с головой и со
+                    всем вниманием к процессу не ожидая ничего взамен.
+                  </span>
+                </Tween>
+              </Reveal>
             </div>
             <LineWhite />
-          </div>
+          </>
         </div>
       </Container>
     </div>
