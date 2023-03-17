@@ -2,11 +2,7 @@
   padding-top: 172px;
   padding-bottom: 385px;
   background: #282728;
-  
-  @media screen and (max-width: 1600px) {
-    padding-bottom: 323px;
-  }
-  
+    
   @media screen and (max-width: 1024px) {
     padding-bottom: 180px;
   }
@@ -40,8 +36,8 @@
 .aboutTitle {
   max-width: 1053px;
   padding-bottom: 24px;
+  transform: translate(0, -30px);
   opacity: 0;
-  padding-top: 30px;
 
   @media screen and (max-width: 1440px) {
     max-width: 851px;
@@ -88,7 +84,6 @@
     padding-bottom: 160px;
   }
 }
-
 
 .elevator {
   display: flex;

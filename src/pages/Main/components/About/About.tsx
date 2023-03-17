@@ -32,7 +32,7 @@ export const About: React.FC = () => {
             <Tween
               to={{
                 opacity: 1,
-                paddingTop: 0,
+                yPercent: 0,
                 scrollTrigger: {
                   trigger: '.aboutTrigger',
                   start: 'top 10%',

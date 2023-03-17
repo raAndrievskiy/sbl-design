@@ -40,6 +40,32 @@
   text-align: right;
 }
 
+.title {
+  font-weight: 400;
+  font-size: 392px;
+  line-height: 463px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-left: 4.16667%;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 338px;
+    line-height: 400px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+
+  }
+
+  @media screen and (max-width: 768px) {
+
+  }
+
+  @media screen and (max-width: 375px) {}
+}
+
 .h3 {
   font-family: Mazzard;
   font-weight: 400;
@@ -121,3 +147,23 @@
     max-width: 100%;
   }
 }
+
+/*
+
+@media screen and (max-width: 1440px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
+*/
