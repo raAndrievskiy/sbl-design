@@ -24,7 +24,6 @@ export const Title: React.FC<TitleProps> = ({ children }) => {
             start: 'top-=230% 10%',
             end: 'bottom-=100% bottom',
             scrub: 0.3,
-            // markers: true,
           },
         }}
       />
@@ -37,7 +36,6 @@ export const Title: React.FC<TitleProps> = ({ children }) => {
             start: 'top-=120% 10%',
             end: 'bottom+=90% bottom',
             scrub: 0.3,
-            markers: true,
           },
         }}
       />

@@ -6,6 +6,7 @@ import { BubblesForTablet } from './BubblesIcon/BubblesForTabletIcon'
 import { BubblesForMobile } from './BubblesIcon/BubblesForMobileIcon'
 
 import { ArrowsIcon } from './ArrowsIcon'
+import { CircleIcon } from './CircleIcon'
 
 export {
   Logo,
@@ -14,4 +15,5 @@ export {
   BubblesForTablet,
   BubblesForMobile,
   ArrowsIcon,
+  CircleIcon,
 }
