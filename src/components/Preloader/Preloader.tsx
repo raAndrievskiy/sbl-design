@@ -4,7 +4,16 @@ import { setLoader } from '../../store/appSlice'
 
 import styles from './styles.module.scss'
 
-export const Preloader: React.FC = () => {
+export const Preloader: React.FC = ({ isLoader }: any) => {
+  useEffect(() => {
+    setTimeout(() => setLoader(false), 3000)
+    if (isLoader) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'visible'
+    }
+  })
+
   return (
     <div className={styles.preloader}>
       <div className={styles.charsWrap}>
