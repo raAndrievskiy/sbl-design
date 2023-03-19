@@ -5,14 +5,14 @@ import { setLoader } from '../../store/appSlice'
 import styles from './styles.module.scss'
 
 export const Preloader: React.FC = ({ isLoader }: any) => {
-  useEffect(() => {
-    setTimeout(() => setLoader(false), 3000)
-    if (isLoader) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'visible'
-    }
-  })
+  // useEffect(() => {
+  //   setTimeout(() => setLoader(false), 3000)
+  //   if (isLoader) {
+  //     document.body.style.overflow = 'hidden'
+  //   } else {
+  //     document.body.style.overflow = 'visible'
+  //   }
+  // })
 
   return (
     <div className={styles.preloader}>
@@ -23,12 +23,13 @@ export const Preloader: React.FC = ({ isLoader }: any) => {
               SBL Design
             </SplitChars>
           }>
-          <Tween to={{ opacity: 1 }} stagger={0.1} />
+          <Tween from={{ opacity: 0 }} duration={0.5} />
+          <Tween to={{ opacity: 1 }} duration={2} stagger={0.1} />
           <Tween
-            // target={2}
             to={{
               opacity: 0,
             }}
+            duration={2}
             stagger={0.1}
           />
         </Timeline>
