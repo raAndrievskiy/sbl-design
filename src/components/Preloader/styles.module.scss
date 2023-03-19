@@ -1,0 +1,31 @@
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  background: #F6F6F6;
+  position: relative;
+  z-index: 99;
+  background: #F6F6F6;
+}
+
+.charsWrap {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+
+.preloaderText {
+  font-weight: 275;
+  font-family: "Mazzard-Extra-Light";
+  font-size: 32px;
+  line-height: 38px;
+  text-transform: uppercase;
+  opacity: 0;
+  
+  &:nth-child(3) {
+    margin-right: 12px;
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Footer, Header } from './components'
+import { Footer, Header, Preloader } from './components'
 
 import { Main, Premium, Special, AboutCompany } from './pages'
 
@@ -13,6 +13,7 @@ const App = () => {
         <Route path="/premium" element={<Premium />} />
         <Route path="/special" element={<Special />} />
         <Route path="/company" element={<AboutCompany />} />
+        <Route path="/preloader" element={<Preloader />} />
       </Routes>
       <Footer />
     </BrowserRouter>
