@@ -27,7 +27,6 @@ export const BubblesInfo: React.FC = () => {
                 start: 'top-=65% 100vh',
                 end: 'bottom+=15% bottom',
                 scrub: 2,
-                markers: true,
               },
             }}>
             <div className={styles.bubblesBg} />
