@@ -5,14 +5,11 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 import { BubblesIcon } from './BubblesIcon'
 import { Container } from '../../../../components'
-import useWindowSize from '../../../../hook/useWindowSize'
 import styles from './styles.module.scss'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export const BubblesInfo: React.FC = () => {
-  const [width] = useWindowSize()
-
   return (
     <div className={styles.bubbles}>
       <Container>
@@ -24,12 +21,13 @@ export const BubblesInfo: React.FC = () => {
           <BubblesIcon className={styles.bubblesIcon} />
           <Tween
             to={{
-              // scale: width > 1024 ? 2.5 : 5.5,
               scale: 2.5,
               scrollTrigger: {
-                start: '850vh 100vh',
-                end: '75% 100%',
+                trigger: '.bubblesTrigger',
+                start: 'top-=65% 100vh',
+                end: 'bottom+=15% bottom',
                 scrub: 2,
+                markers: true,
               },
             }}>
             <div className={styles.bubblesBg} />

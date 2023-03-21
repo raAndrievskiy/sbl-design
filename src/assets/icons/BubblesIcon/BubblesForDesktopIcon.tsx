@@ -51,7 +51,7 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
               to={{
                 strokeDashoffset: '',
                 scrollTrigger: {
-                  start: '850vh 100vh',
+                  start: '700vh 100vh',
                   end: '80% 100%',
                   scrub: 0.8,
                 },
@@ -97,7 +97,7 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
               to={{
                 strokeDashoffset: '',
                 scrollTrigger: {
-                  start: '850vh 100vh',
+                  start: '700vh 100vh',
                   end: '80% 100%',
                   scrub: true,
                 },
@@ -143,7 +143,7 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
               to={{
                 strokeDashoffset: '',
                 scrollTrigger: {
-                  start: '850vh 100vh',
+                  start: '700vh 100vh',
                   end: '80% 100%',
                   scrub: 1,
                 },
@@ -181,7 +181,7 @@ export const BubblesForDesktop = React.forwardRef<SVGSVGElement, IconProps>(
               to={{
                 strokeDashoffset: '',
                 scrollTrigger: {
-                  start: '850vh 100vh',
+                  start: '700vh 100vh',
                   end: '80% 100%',
                   scrub: 0.9,
                 },
