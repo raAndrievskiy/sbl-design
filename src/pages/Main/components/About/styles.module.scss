@@ -37,7 +37,8 @@
   max-width: 1053px;
   padding-bottom: 24px;
   transform: translate(0, -30px);
-  opacity: 0;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
 
   @media screen and (max-width: 1440px) {
     max-width: 851px;
@@ -59,6 +60,17 @@
     padding-bottom: 32px;
   }
 }
+
+.aboutTitleHidden {
+  -webkit-transition: 0;
+  transition: 0;
+  opacity: 0;
+}
+
+.aboutTitleVisible {
+  opacity: 1;
+}
+
 
 .aboutDescription {
   margin-left: auto;

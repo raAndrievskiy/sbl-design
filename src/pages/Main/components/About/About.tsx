@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import gsap from 'gsap'
 import { Tween, Reveal } from 'react-gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
@@ -11,6 +11,27 @@ gsap.registerPlugin(ScrollTrigger)
 
 export const About: React.FC = () => {
   const [width] = useWindowSize()
+  const aboutTitleRef = useRef<HTMLDivElement>(null)
+  const [isAboutTitleVisible, setIsAboutTitleVisible] = useState(false)
+
+  useEffect(() => {
+    const currentRef = aboutTitleRef.current
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsAboutTitleVisible(entry.isIntersecting)
+      },
+      { rootMargin: '0px' },
+    )
+    if (currentRef) {
+      observer.observe(currentRef)
+    }
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef)
+      }
+    }
+  }, [])
 
   return (
     <div className={`${styles.aboutWrap} aboutTrigger`}>
@@ -31,16 +52,21 @@ export const About: React.FC = () => {
           <Reveal repeat>
             <Tween
               to={{
-                opacity: 1,
                 yPercent: 0,
                 scrollTrigger: {
                   trigger: '.aboutTrigger',
-                  start: 'top 10%',
+                  start: 'top-=50% 10%',
                   end: 'bottom bottom',
                   scrub: true,
                 },
               }}>
-              <h3 className={`h3 ${styles.aboutTitle}`}>
+              <h3
+                className={
+                  isAboutTitleVisible
+                    ? `h3 ${styles.aboutTitle} ${styles.aboutTitleVisible}`
+                    : `h3 ${styles.aboutTitle} ${styles.aboutTitleHidden}`
+                }
+                ref={aboutTitleRef}>
                 Мы знаем как воплатить вашу идею в жизнь
               </h3>
             </Tween>
