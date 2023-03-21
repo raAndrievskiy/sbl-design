@@ -16,36 +16,43 @@ export const portfolioImagesData: PortfolioImagesDataTypes[] = [
   {
     id: 1,
     src: portFolioImage1,
+    // className:
     x: '',
   },
   {
     id: 2,
     src: portFolioImage2,
+    // className:
     x: '',
   },
   {
     id: 3,
     src: portFolioImage3,
+    // className:
     x: '',
   },
   {
     id: 4,
     src: portFolioImage4,
+    // className:
     x: '',
   },
   {
     id: 5,
     src: portFolioImage5,
+    // className:
     x: '',
   },
   {
     id: 6,
     src: portFolioImage6,
+    // className:
     x: '',
   },
   {
     id: 7,
     src: portFolioImage7,
+    // className:
     x: '',
   },
 ]

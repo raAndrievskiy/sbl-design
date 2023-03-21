@@ -30,7 +30,7 @@ export const Title: React.FC<TitleProps> = ({ children }) => {
       <Tween
         target={1}
         to={{
-          xPercent: -40,
+          xPercent: -20,
           scrollTrigger: {
             trigger: '.title',
             start: 'top-=130% 10%',

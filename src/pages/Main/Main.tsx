@@ -13,7 +13,7 @@ export const Main: React.FC = () => {
       <FullScreenVideoText />
       <BubblesInfo />
       <About />
-      {/* <Portfolio /> */}
+      <Portfolio />
     </>
   )
 }

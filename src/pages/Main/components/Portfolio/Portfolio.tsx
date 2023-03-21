@@ -1,49 +1,17 @@
-import React, { MouseEvent, useEffect, useRef } from 'react'
-import gsap, { TimelineLite, TweenMax } from 'gsap'
-// import { TweenMax, gsap } from 'gsap'
+import React, { useEffect } from 'react'
+import gsap from 'gsap'
 import { CircleIcon } from '../../../../assets/icons'
 import { Title } from '../../../../components'
 import { portfolioImagesData } from './portfolioImagesData'
 
 import styles from './styles.module.scss'
 
-// var rect = $('#container')[0].getBoundingClientRect()
-// var mouse = { x: 0, y: 0, moved: false }
-
-// $('#container').mousemove(function (e) {
-//   mouse.moved = true
-//   mouse.x = e.clientX - rect.left
-//   mouse.y = e.clientY - rect.top
-// })
-
-// // Ticker event will be called on every frame
-// TweenLite.ticker.addEventListener('tick', function () {
-//   if (mouse.moved) {
-//     parallaxIt('.slide', -100)
-//     parallaxIt('img', -30)
-//   }
-//   mouse.moved = false
-// })
-
-// function parallaxIt(target, movement) {
-//   TweenMax.to(target, 0.5, {
-//     x: ((mouse.x - rect.width / 2) / rect.width) * movement,
-//     y: ((mouse.y - rect.height / 2) / rect.height) * movement,
-//   })
-// }
-
-// $(window).on('resize scroll', function () {
-//   rect = $('#container')[0].getBoundingClientRect()
-// })
-
 export const Portfolio: React.FC = () => {
   const portfolioImagesRef = React.useRef<HTMLDivElement>(null)
-  const imageRef = React.useRef<HTMLImageElement>(null)
 
   useEffect(() => {
     const portfolio = portfolioImagesRef.current
     let rect = portfolio?.getBoundingClientRect()
-    console.log('rect: ', rect)
     let mouse = { x: 0, y: 0, moved: false }
 
     if (!portfolio) return
@@ -51,11 +19,11 @@ export const Portfolio: React.FC = () => {
     const handleMouseMove = (event: any) => {
       mouse.moved = true
       mouse.x = event.clientX - (rect?.x || 0)
-      const tl = new TimelineLite()
-      console.log('tl: ', tl)
+      const tl = gsap.timeline()
 
       function parallaxIt(target: any, movement: any) {
-        TweenMax.to(target, 0.5, {
+        tl.to(target, {
+          duration: 0.5,
           x:
             ((mouse.x - (rect?.width || 0) / 2) / (rect?.width || 0)) *
             movement,
@@ -65,13 +33,14 @@ export const Portfolio: React.FC = () => {
         })
       }
 
-      tl.ticker.add(() => {
+      const mouseMoved = () => {
         if (mouse.moved) {
-          // parallaxIt('.slide', -100)
-          parallaxIt('img', -30)
+          parallaxIt('.test', -30)
         }
         mouse.moved = false
-      })
+      }
+
+      gsap.ticker.add(mouseMoved)
     }
 
     portfolio.addEventListener('mousemove', handleMouseMove)
@@ -94,7 +63,7 @@ export const Portfolio: React.FC = () => {
         <CircleIcon className={styles.circleIcon} />
         {portfolioImagesData.map(images => (
           <img
-            className={`${styles['portfolioImage' + images.id]}`}
+            className={`${styles['portfolioImage' + images.id]} test`}
             src={images.src}
             alt=""
             key={images.id}

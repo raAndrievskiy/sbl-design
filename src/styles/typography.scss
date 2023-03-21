@@ -42,8 +42,8 @@
 
 .title {
   font-weight: 400;
-  font-size: 392px;
-  line-height: 463px;
+  font-size: 20.42vw;
+  line-height: 24.12vw;
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -51,19 +51,24 @@
   margin-left: 4.16667%;
 
   @media screen and (max-width: 1440px) {
-    font-size: 338px;
-    line-height: 400px;
+    font-size: 19.9vw;
+    line-height: 23.5vw;
   }
   
   @media screen and (max-width: 1024px) {
-
+    font-size: 19.73vw;
+    line-height: 23.4vw;
   }
 
   @media screen and (max-width: 768px) {
-
+    font-size: 19.9vw;
+    line-height: 180px;
   }
 
-  @media screen and (max-width: 375px) {}
+  @media screen and (max-width: 375px) {
+    font-size: 73px;
+    line-height: 86px;
+  }
 }
 
 .h3 {
