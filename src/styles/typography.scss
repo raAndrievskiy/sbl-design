@@ -101,8 +101,8 @@
   opacity: 0;
 
   @media screen and (max-width: 1440px) {
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   @media screen and (max-width: 768px) {
@@ -111,9 +111,9 @@
   }
 
   @media screen and (max-width: 525px) {
-    font-size: 32px;
-    line-height: 38px;
-    padding-bottom: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 16px;
   }
 }
 
