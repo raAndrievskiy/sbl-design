@@ -25,7 +25,7 @@ export const HeaderDesktop: React.FC = () => {
               </NavLink>
             </div>
             <div className={styles.linkWrap}>
-              <NavLink to="/" className={`${styles.link} color-white`}>
+              <NavLink to="/about" className={`${styles.link} color-white`}>
                 О компании
               </NavLink>
               <NavLink to="/" className={`${styles.link} color-white`}>

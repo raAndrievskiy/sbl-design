@@ -16,7 +16,7 @@ export const BubblesInfo: React.FC = () => {
   return (
     <div className={styles.bubbles}>
       <Container>
-        <span className={`description ${styles.bubblesDescription}`}>
+        <span className={`subtitle ${styles.bubblesDescription}`}>
           Разрабатывая подобные идеи ты входишь в них с головой и со всем
           вниманием к процессу не ожидая ничего взамен.
         </span>

@@ -72,8 +72,7 @@ export const About: React.FC = () => {
             </Tween>
           </Reveal>
           <LineWhite />
-          <span
-            className={`description color-white ${styles.aboutDescription}`}>
+          <span className={`subtitle color-white ${styles.aboutSubtitle}`}>
             Разрабатывая подобные идеи ты входишь в них с головой и со всем
             вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные
             идеи ты входишь в них с головой и со всем вниманием к процессу не
