@@ -1,0 +1,103 @@
+.statistics {
+  background: #054D5C;
+  padding: 152px 0;
+}
+
+.statisticsBlockWrap {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 1440px) {}
+  
+  @media screen and (max-width: 1024px) {}
+
+  @media screen and (max-width: 768px) {}
+
+  @media screen and (max-width: 375px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+.statisticsBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  padding: 72px 122px 106px 40px;
+  border: 1px solid #f6f6f6;
+
+  @media screen and (max-width: 1440px) {
+    padding: 40px 32px 72px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    padding: 32px 24px 64px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 24px 16px 40px;
+  }
+
+  @media screen and (max-width: 375px) {
+    width: 100%;
+  }
+}
+
+.blockTitle {
+  font-weight: 300;
+  font-size: 88px;
+  line-height: 104px;
+  padding-bottom: 46px;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 72px;
+    line-height: 85px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    font-size: 48px;
+    line-height: 57px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  @media screen and (max-width: 375px) {}
+}
+
+.blockDescription {
+  font-size: 24px;
+  line-height: 28px;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media screen and (max-width: 375px) {}
+}
+
+
+/* 
+
+@media screen and (max-width: 1440px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 375px) {}
+
+*/

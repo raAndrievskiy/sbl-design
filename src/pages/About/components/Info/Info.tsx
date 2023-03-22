@@ -3,7 +3,7 @@ import { Container, LineWhite } from '../../../../components'
 
 import styles from './styles.module.scss'
 
-export const About = () => {
+export const Info: React.FC = () => {
   return (
     <div className={styles.about}>
       <Container>
