@@ -2,6 +2,7 @@ import React from 'react'
 import gsap from 'gsap'
 import { Timeline, Tween } from 'react-gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+
 import useWindowSize from '../../hook/useWindowSize'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -12,6 +13,7 @@ type TitleProps = {
 
 export const Title: React.FC<TitleProps> = ({ children }) => {
   const [width] = useWindowSize()
+
   return (
     <Timeline target={<h1 className="title">{children}</h1>}>
       <Tween

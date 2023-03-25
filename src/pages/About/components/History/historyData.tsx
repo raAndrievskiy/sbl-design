@@ -3,7 +3,7 @@ import mockImg from '../../../../assets/images/mockImg.png'
 type HistoryDataProps = {
   id: number
   description: string
-  img: string
+  img: any
 }
 
 export const historyData: HistoryDataProps[] = [
