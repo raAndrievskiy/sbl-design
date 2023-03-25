@@ -15,15 +15,15 @@ export const Description: React.FC<DescriptionProps> = ({ description }) => {
   return (
     <Tween
       to={{
-        yPercent: -50,
-        opacity: 0,
+        yPercent: -20,
+        opacity: 1,
         scrollTrigger: {
           trigger: '.historyTrigger',
           start: 'top 10%',
-          end: 'bottom+=20% bottom',
-          // pin: '.historyTrigger',
+          end: 'bottom bottom',
+          pin: true,
           scrub: true,
-          // markers: true,
+          markers: true,
         },
       }}>
       <span className={styles.imgDescription}>{description}</span>
