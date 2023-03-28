@@ -16,7 +16,7 @@ export const Main: React.FC = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    setTimeout(() => dispatch(setLoader(false)), 4000)
+    setTimeout(() => dispatch(setLoader(false)), 0)
     if (loader) {
       document.body.style.overflow = 'hidden'
     } else {
@@ -26,7 +26,7 @@ export const Main: React.FC = () => {
 
   return (
     <>
-      {/* {loader ? <Preloader /> : null} */}
+      {/* {isLoading ? <Preloader /> : null} */}
       <FullScreenVideoText />
       <BubblesInfo />
       <About />

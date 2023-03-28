@@ -1,0 +1,52 @@
+.special {
+  overflow: hidden;
+}
+
+.spacialMain {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: url(../../../../assets/images/special/specialBg.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spacialMainText {
+  font-family: "Mazzard-Light";
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 85px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 1440px) {}
+  
+  @media screen and (max-width: 1024px) {
+    font-size: 50px;
+    line-height: 59px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 43px;
+    line-height: 51px;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+/* 
+
+@media screen and (max-width: 1440px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 375px) {}
+
+*/

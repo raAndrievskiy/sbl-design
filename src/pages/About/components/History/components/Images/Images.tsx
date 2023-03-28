@@ -3,29 +3,35 @@ import gsap from 'gsap'
 import { Tween } from 'react-gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
+import { historyData } from '../../historyData'
 import styles from './styles.module.scss'
 
 gsap.registerPlugin(ScrollTrigger)
 
-type ImagesProps = {
-  src: string
-}
-
-export const Images: React.FC<ImagesProps> = ({ src }) => {
+export const Images: React.FC = () => {
   return (
-    <Tween
-      to={{
-        yPercent: -500,
-        scrollTrigger: {
-          trigger: '.historyTrigger',
-          start: 'top 10%',
-          end: 'bottom bottom',
-          // pin: '.historyTrigger',
-          scrub: true,
-          markers: true,
-        },
-      }}>
-      <img className={styles.elevator} src={src} alt="" />
-    </Tween>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      {historyData.map(item => (
+        <Tween
+          key={item.id}
+          to={{
+            yPercent: -200,
+            scrollTrigger: {
+              trigger: '.historyTrigger',
+              start: 'top 10%',
+              end: 'bottom bottom',
+              // pin: '.historyTrigger',
+              scrub: true,
+              // markers: true,
+            },
+          }}>
+          <img
+            className={`${styles.elevator} imageTrigger`}
+            src={item.img}
+            alt=""
+          />
+        </Tween>
+      ))}
+    </div>
   )
 }

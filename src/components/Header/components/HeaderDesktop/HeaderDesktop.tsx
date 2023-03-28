@@ -20,7 +20,7 @@ export const HeaderDesktop: React.FC = () => {
               <NavLink to="/preloader" className={`${styles.link} color-white`}>
                 Premium
               </NavLink>
-              <NavLink to="/" className={`${styles.link} color-white`}>
+              <NavLink to="/special" className={`${styles.link} color-white`}>
                 Special
               </NavLink>
             </div>

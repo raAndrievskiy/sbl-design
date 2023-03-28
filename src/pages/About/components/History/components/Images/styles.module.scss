@@ -1,7 +1,9 @@
 .elevator {
-
+  margin-bottom: 272px;
+  
   @media screen and (max-width: 1440px) {
     width: 368px;
+    margin-bottom: 184px;
   }
 
   @media screen and (max-width: 1024px) {}

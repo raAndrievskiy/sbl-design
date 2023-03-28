@@ -1,11 +1,11 @@
 import React from 'react'
-
-import styles from './styles.module.scss'
+import { ImageBackground, Characteristics } from './components'
 
 export const Special: React.FC = () => {
   return (
     <>
-      <>Special</>
+      <ImageBackground />
+      <Characteristics />
     </>
   )
 }

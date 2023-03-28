@@ -22,14 +22,12 @@ export const History: React.FC = () => {
             Разрабатывая подобные идеи ты входишь в них с головой и со всем
             вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные."
           />
-          <div className={styles.imgWrap}>
-            {historyData.map(item => (
-              <div key={item.id} className={styles.imgBlock}>
-                <Images src={item.img} />
-                <Description description={item.description} />
-              </div>
-            ))}
+          {/* <div className={styles.imgWrap}> */}
+          <div className={styles.imgBlock}>
+            <Images />
+            <Description />
           </div>
+          {/* </div> */}
         </div>
       </Container>
     </div>
