@@ -1,0 +1,123 @@
+.portfolio {
+  padding: 205px 0;
+  background: #282728;
+  overflow: hidden;
+}
+
+.portfolioText {
+  position: relative;
+  margin-left: 13vw;
+  max-width: 750px;
+  padding-bottom: 880px;
+
+  @media screen and (max-width: 1440px) {
+    max-width: 627px;
+    margin-left: 8.41vw;
+  }
+  
+  @media screen and (max-width: 1250px) {
+    margin-left: 45px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    max-width: 505px;
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 418px;
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 375px) {
+
+  }
+}
+
+.portfolioTitle {
+
+  @media screen and (max-width: 1440px) {}
+  
+  @media screen and (max-width: 1024px) {}
+
+  @media screen and (max-width: 768px) {}
+
+  @media screen and (max-width: 375px) {}
+}
+
+.portfolioDescription { 
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.previewImg1 {
+  position: absolute;
+  right: -29vw;
+  top: 0;
+  z-index: 1;
+
+  @media screen and (max-width: 1440px) {
+    right: -36vw;
+    width: 362px;
+    height: 496px;
+  }
+  
+  @media screen and (max-width: 1250px) {
+    width: 284px;
+    height: 389px;
+    top: 8%;
+    right: -29vw;
+  }
+
+  @media screen and (max-width: 1024px) {
+    
+  }
+
+  @media screen and (max-width: 768px) {}
+
+  @media screen and (max-width: 375px) {
+    display: none;
+  }
+}
+
+.previewImg2 {
+  position: absolute;
+  right: -16vw;
+  top: 35%;
+  z-index: 3;
+
+  @media screen and (max-width: 1440px) {
+    right: -23vw;
+    width: 553px;
+    height: 368px;
+  }
+
+  @media screen and (max-width: 1250px) {
+    width: 443px;
+    height: 296px;
+    right: -16vw;
+    top: 33%;
+  }
+  
+  @media screen and (max-width: 1024px) {}
+
+  @media screen and (max-width: 768px) {}
+
+  @media screen and (max-width: 375px) {
+    display: none;
+  }
+}
+
+
+/* 
+
+@media screen and (max-width: 1440px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 375px) {}
+
+*/

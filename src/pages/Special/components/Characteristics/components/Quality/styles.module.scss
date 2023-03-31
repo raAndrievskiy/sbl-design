@@ -27,36 +27,6 @@
 }
 
 
-.characteristicsTitle {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 72px;
-  line-height: 85px;
-  text-transform: uppercase;
-  padding-bottom: 24px;
-
-  @media screen and (max-width: 1440px) {
-    font-size: 58px;
-    line-height: 69px;
-  }
-
-  @media screen and (max-width: 1024px) {
-    font-size: 50px;
-    line-height: 59px;
-    padding-bottom: 16px;
-  }
-
-  @media screen and (max-width: 768px) {
-    font-size: 43px;
-    line-height: 51px;
-  }
-
-  @media screen and (max-width: 375px) {
-    font-size: 28px;
-    line-height: 33px;
-  }
-}
-
 .characteristicsDescription {
   font-size: 24px;
   line-height: 28px;

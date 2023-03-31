@@ -7,7 +7,7 @@ export const Uniqueness: React.FC = () => {
   return (
     <div className={styles.characteristics}>
       <div className={styles.characteristicsText}>
-        <span className={styles.characteristicsTitle}>Уникальность</span>
+        <span className="specialTitle">Уникальность</span>
         <span className={styles.characteristicsDescription}>
           Разрабатывая подобные идеи ты входишь в них с головой и со всем
           вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные
@@ -26,10 +26,10 @@ export const Uniqueness: React.FC = () => {
 
           <div className={styles.info}>
             <div className={styles.circle}>
-              <span className={styles.circleText}>2.5м</span>
+              <span className={styles.circleText}>5т</span>
             </div>
             <span className="color-grey">максимальная</span>
-            <span className={styles.infoText}>высота кабин</span>
+            <span className={styles.infoText}>грузоподъёмность</span>
           </div>
         </div>
       </div>
