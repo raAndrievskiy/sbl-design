@@ -7,6 +7,10 @@ import { BubblesForMobile } from './BubblesIcon/BubblesForMobileIcon'
 import { ArrowsIcon } from './ArrowsIcon'
 import { CircleIcon } from './CircleIcon'
 
+import { StylishIcon } from './Premium/StylishIcon'
+import { UniquelyIcon } from './Premium/UniquelyIcon'
+import { BestIcon } from './Premium/BestIcon'
+
 export {
   Logo,
   BubblesForDesktop,
@@ -14,4 +18,7 @@ export {
   BubblesForMobile,
   ArrowsIcon,
   CircleIcon,
+  StylishIcon,
+  UniquelyIcon,
+  BestIcon,
 }

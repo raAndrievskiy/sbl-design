@@ -11,7 +11,7 @@ export const Portfolio: React.FC = () => {
     <div className={styles.portfolio}>
       <Container>
         <div className={styles.portfolioText}>
-          <h3 className={`specialTitle color-white ${styles.portfolioTitle}`}>
+          <h3 className="specialTitle color-white">
             Умеем встроить лифт в любое пространство
           </h3>
           <span className={`color-white ${styles.portfolioDescription}`}>

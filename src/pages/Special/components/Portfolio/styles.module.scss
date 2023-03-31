@@ -3,7 +3,9 @@
   background: #282728;
   overflow: hidden;
 
-  @media screen and (max-width: 1440px) {}
+  @media screen and (max-width: 1440px) {
+    padding: 92px 0 152px;
+  }
   
   @media screen and (max-width: 1024px) {}
 
@@ -19,7 +21,7 @@
   position: relative;
   margin-left: 13vw;
   max-width: 750px;
-  padding-bottom: 880px;
+  margin-bottom: 46vw;
 
   @media screen and (max-width: 1440px) {
     max-width: 627px;
@@ -32,7 +34,6 @@
 
   @media screen and (max-width: 1024px) {
     max-width: 505px;
-    
   }
 
   @media screen and (max-width: 920px) {
@@ -46,17 +47,6 @@
   @media screen and (max-width: 375px) {
 
   }
-}
-
-.portfolioTitle {
-
-  @media screen and (max-width: 1440px) {}
-  
-  @media screen and (max-width: 1024px) {}
-
-  @media screen and (max-width: 768px) {}
-
-  @media screen and (max-width: 375px) {}
 }
 
 .portfolioDescription { 
@@ -104,23 +94,20 @@
   }
 
   @media screen and (max-width: 920px) {
+    top: 10%;
     right: -40vw;
   }
 
   @media screen and (max-width: 768px) {
-    width: 249px;
-    height: 341px;
-  }
-
-  @media screen and (max-width: 375px) {
     display: none;
   }
+
 }
 
 .previewImg2 {
   position: absolute;
   right: -16vw;
-  top: 35%;
+  top: 110%;
   z-index: 3;
 
   @media screen and (max-width: 1440px) {
@@ -133,25 +120,19 @@
     width: 443px;
     height: 296px;
     right: -16vw;
-    top: 33%;
   }
   
   @media screen and (max-width: 1024px) {
-    top: 28%;
     right: -19vw;
   }
 
   @media screen and (max-width: 920px) {
-    top: 29%;
     right: -29vw;
-  }
-
-  @media screen and (max-width: 768px) {
     width: 378px;
     height: 252px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 }
