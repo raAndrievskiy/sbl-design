@@ -3,6 +3,7 @@ import { Container } from '../../../../components'
 
 import previewElevator01 from '../../../../assets/images/special/portfolio/preview-elevator-01.png'
 import previewElevator02 from '../../../../assets/images/special/portfolio/preview-elevator-02.png'
+import { portfolioImagesData } from './portfolioImagesData'
 import styles from './styles.module.scss'
 
 export const Portfolio: React.FC = () => {
@@ -21,6 +22,16 @@ export const Portfolio: React.FC = () => {
           </span>
           <img src={previewElevator01} className={styles.previewImg1} alt="" />
           <img src={previewElevator02} className={styles.previewImg2} alt="" />
+        </div>
+        <div className={styles.portfolioImages}>
+          {portfolioImagesData.map(img => (
+            <img
+              className={`${styles[img.className]} ${styles.portfolioImage}`}
+              src={img.src}
+              alt=""
+              key={img.id}
+            />
+          ))}
         </div>
       </Container>
     </div>

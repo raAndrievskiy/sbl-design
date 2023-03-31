@@ -2,6 +2,17 @@
   padding: 205px 0;
   background: #282728;
   overflow: hidden;
+
+  @media screen and (max-width: 1440px) {}
+  
+  @media screen and (max-width: 1024px) {}
+
+  @media screen and (max-width: 768px) {
+  }
+
+  @media screen and (max-width: 375px) {
+    padding: 64px 0;
+  }
 }
 
 .portfolioText {
@@ -24,9 +35,12 @@
     
   }
 
-  @media screen and (max-width: 768px) {
-    max-width: 418px;
+  @media screen and (max-width: 920px) {
     margin-left: 0;
+    max-width: 419px;
+  }
+
+  @media screen and (max-width: 768px) {
   }
 
   @media screen and (max-width: 375px) {
@@ -49,6 +63,20 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 28px;
+
+  @media screen and (max-width: 1440px) {}
+  
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media screen and (max-width: 920px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media screen and (max-width: 375px) {}
 }
 
 .previewImg1 {
@@ -71,10 +99,18 @@
   }
 
   @media screen and (max-width: 1024px) {
-    
+    top: 0;
+    right: -33vw;
   }
 
-  @media screen and (max-width: 768px) {}
+  @media screen and (max-width: 920px) {
+    right: -40vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 249px;
+    height: 341px;
+  }
 
   @media screen and (max-width: 375px) {
     display: none;
@@ -100,13 +136,44 @@
     top: 33%;
   }
   
-  @media screen and (max-width: 1024px) {}
+  @media screen and (max-width: 1024px) {
+    top: 28%;
+    right: -19vw;
+  }
 
-  @media screen and (max-width: 768px) {}
+  @media screen and (max-width: 920px) {
+    top: 29%;
+    right: -29vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 378px;
+    height: 252px;
+  }
 
   @media screen and (max-width: 375px) {
     display: none;
   }
+}
+
+.portfolioImages {
+  display: grid;
+  gap: 5vw;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(3,minmax(60px,1fr));
+}
+
+.portfolioImage {
+  object-fit: cover;
+  width: 100%;
+}
+
+.tall {
+  grid-row-end: span 2;
+}
+
+.wide {
+  grid-column-end: span 2;
 }
 
 
