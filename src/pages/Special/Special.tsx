@@ -1,10 +1,11 @@
 import React from 'react'
-import { ImageBackground, Characteristics, Portfolio } from './components'
+import { ImageBackground } from '../../components'
+import { Characteristics, Portfolio } from './components'
 
 export const Special: React.FC = () => {
   return (
     <>
-      <ImageBackground />
+      <ImageBackground text="Special" />
       <Characteristics />
       <Portfolio />
     </>
