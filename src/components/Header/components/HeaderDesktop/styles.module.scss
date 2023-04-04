@@ -49,8 +49,32 @@
   font-size: 20px;
   line-height: 24px;
   margin: 0 16px;
+  position: relative;
+  padding-bottom: 5px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #F6F6F6;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: bottom right;
+    transform-origin: bottom right;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
 
   &:hover {
-    color: #054D5C;
+    &::after {
+      -webkit-transform-origin: bottom left;
+      transform-origin: bottom left;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
   }
 }
