@@ -23,8 +23,8 @@ export const StylishIcon = ({ className }: IconProps) => {
           x2="273.721"
           y2="165.723"
           gradientUnits="userSpaceOnUse">
-          <stop stop-color="#054D5C" />
-          <stop offset="1" stop-color="#289DB6" />
+          <stop stopColor="#054D5C" />
+          <stop offset="1" stopColor="#289DB6" />
         </linearGradient>
       </defs>
     </svg>
