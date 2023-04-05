@@ -12,18 +12,19 @@ gsap.registerPlugin(ScrollTrigger)
 
 export const AnimationTextAndImage: React.FC = () => {
   return (
-    <div className={`${styles.premiumTextWrap} premiumTextTrigger`}>
+    <div className={styles.premiumTextWrap}>
       <Container>
-        <div className={styles.premiumText}>
+        <div className={`${styles.premiumText} premiumTextTrigger`}>
           <Tween
             to={{
               color: '#F6F6F6',
               scrollTrigger: {
                 trigger: '.premiumTextTrigger',
-                start: 'top 100vh',
-                end: '80% 100%',
+                start: 'top+=90vh 100vh',
+                end: 'bottom+=40vh 100%',
                 scrub: 2,
-                // markers: true,
+                pin: '.premiumTextTrigger',
+                markers: true,
               },
             }}
             stagger={0.1}>
