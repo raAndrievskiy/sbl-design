@@ -2,6 +2,7 @@ import React from 'react'
 
 import qualityElevatorImg from '../../../../../../assets/images/special/characteristics/qualityElevator.png'
 import styles from './styles.module.scss'
+import { CharacteristicsCircleIcon } from '../../../../../../assets/icons'
 
 export const Quality: React.FC = () => {
   return (
@@ -25,6 +26,11 @@ export const Quality: React.FC = () => {
 
         <div className={styles.specifications}>
           <div className={styles.info}>
+            <CharacteristicsCircleIcon
+              className={styles.loadedCircle}
+              svgDrawTo={0.54}
+              startTrigger="1800vh"
+            />
             <div className={styles.circle}>
               <span className={styles.circleText}>2.5м</span>
             </div>
@@ -33,6 +39,11 @@ export const Quality: React.FC = () => {
           </div>
 
           <div className={styles.info}>
+            <CharacteristicsCircleIcon
+              className={styles.loadedCircle}
+              svgDrawTo={0.6}
+              startTrigger="1800vh"
+            />
             <div className={styles.circle}>
               <span className={styles.circleText}>5т</span>
             </div>

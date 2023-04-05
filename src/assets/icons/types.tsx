@@ -4,3 +4,9 @@ export interface IconProps {
   className?: string
   ref?: any
 }
+
+export interface CharacteristicsCircleIconProps {
+  className?: string
+  svgDrawTo?: number
+  startTrigger?: string
+}

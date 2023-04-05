@@ -1,4 +1,5 @@
 import React from 'react'
+import { CharacteristicsCircleIcon } from '../../../../../../assets/icons'
 
 import uniqueElevatorImg from '../../../../../../assets/images/special/characteristics/uniqueElevator.png'
 import styles from './styles.module.scss'
@@ -17,6 +18,11 @@ export const Uniqueness: React.FC = () => {
 
         <div className={styles.specifications}>
           <div className={styles.info}>
+            <CharacteristicsCircleIcon
+              className={styles.loadedCircle}
+              svgDrawTo={0.4}
+              startTrigger="960vh"
+            />
             <div className={styles.circle}>
               <span className={styles.circleText}>2.5м</span>
             </div>
@@ -25,6 +31,11 @@ export const Uniqueness: React.FC = () => {
           </div>
 
           <div className={styles.info}>
+            <CharacteristicsCircleIcon
+              className={styles.loadedCircle}
+              svgDrawTo={0.7}
+              startTrigger="960vh"
+            />
             <div className={styles.circle}>
               <span className={styles.circleText}>5т</span>
             </div>

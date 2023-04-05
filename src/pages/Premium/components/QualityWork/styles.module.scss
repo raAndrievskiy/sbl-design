@@ -1,6 +1,11 @@
+.qualityWorkWrap {
+  overflow: hidden;
+}
+
 .qualityWork {
   height: 100vh;
   position: relative;
+
 }
 
 .circle {
@@ -30,6 +35,7 @@
   font-size: 120px;
   line-height: 142px;
   text-transform: uppercase;
+  user-select: none;
 
   &:first-child, &:last-child {
     font-style: italic;

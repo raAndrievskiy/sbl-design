@@ -4,13 +4,12 @@ import { Container, LineWhite } from '../../../../components'
 import styles from './styles.module.scss'
 
 export const QualityWork: React.FC = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 })
-  console.log('position: ', position.y)
+  const [position, setPosition] = useState({ x: 0 })
   const circleRef = React.useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const setFromEvent = (event: any) => {
-      setPosition({ x: event.clientX, y: event.clientY })
+      setPosition({ x: event.clientX })
     }
 
     const circle = circleRef.current
@@ -28,32 +27,34 @@ export const QualityWork: React.FC = () => {
 
   const circleStyle = {
     left: position.x === 0 ? '50%' : position.x,
-    transition: 'all 0.5s ease-out',
+    transition: 'all 1s ease-out',
   }
 
   return (
-    <Container>
-      <div className={styles.qualityWork} ref={circleRef}>
-        <div className={styles.circle} style={circleStyle} />
-        <div className={styles.qualityTextWrap}>
-          <span className={`${styles.qualityText} color-white`}>
-            Качественная работа
-          </span>
-          <LineWhite />
-          <span className={`${styles.qualityText} color-white`}>
-            Точно в срок
-          </span>
-          <LineWhite />
-          <span className={`${styles.qualityText} color-white`}>
-            Братья Савичевы
-          </span>
-          <LineWhite />
-          <span className={`${styles.qualityText} color-white`}>
-            SBL DESIGN
-          </span>
-          <LineWhite />
+    <div className={styles.qualityWorkWrap}>
+      <Container>
+        <div className={styles.qualityWork} ref={circleRef}>
+          <div className={styles.circle} style={circleStyle} />
+          <div className={styles.qualityTextWrap}>
+            <span className={`${styles.qualityText} color-white`}>
+              Качественная работа
+            </span>
+            <LineWhite />
+            <span className={`${styles.qualityText} color-white`}>
+              Точно в срок
+            </span>
+            <LineWhite />
+            <span className={`${styles.qualityText} color-white`}>
+              Братья Савичевы
+            </span>
+            <LineWhite />
+            <span className={`${styles.qualityText} color-white`}>
+              SBL DESIGN
+            </span>
+            <LineWhite />
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   )
 }
