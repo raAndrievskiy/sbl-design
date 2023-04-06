@@ -12,24 +12,25 @@ gsap.registerPlugin(ScrollTrigger)
 
 export const History: React.FC = () => {
   return (
-    <div className={`${styles.history} historyTrigger`}>
-      <Container>
-        <Title children="Начало" />
-        <div className={styles.historyImgWrap}>
-          <Subtitle
-            children="Разрабатывая подобные идеи ты входишь в них с головой и со всем
-            вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные.
-            Разрабатывая подобные идеи ты входишь в них с головой и со всем
-            вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные."
-          />
-          {/* <div className={styles.imgWrap}> */}
-          <div className={styles.imgBlock}>
-            <Images />
-            <Description />
-          </div>
-          {/* </div> */}
-        </div>
-      </Container>
-    </div>
+    <></>
+    // <div className={`${styles.history} historyTrigger`}>
+    //   <Container>
+    //     <Title children="Начало" />
+    //     <div className={styles.historyImgWrap}>
+    //       <Subtitle
+    //         children="Разрабатывая подобные идеи ты входишь в них с головой и со всем
+    //         вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные.
+    //         Разрабатывая подобные идеи ты входишь в них с головой и со всем
+    //         вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные."
+    //       />
+    //       {/* <div className={styles.imgWrap}> */}
+    //       <div className={styles.imgBlock}>
+    //         <Images />
+    //         <Description />
+    //       </div>
+    //       {/* </div> */}
+    //     </div>
+    //   </Container>
+    // </div>
   )
 }

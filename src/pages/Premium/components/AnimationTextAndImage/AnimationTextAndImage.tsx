@@ -22,7 +22,7 @@ export const AnimationTextAndImage: React.FC = () => {
                 trigger: '.premiumTextTrigger',
                 start: 'top+=90vh 100vh',
                 end: 'bottom+=40vh 100%',
-                scrub: 2,
+                scrub: true,
                 pin: '.premiumTextTrigger',
                 // markers: true,
               },
