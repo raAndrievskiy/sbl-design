@@ -10,6 +10,7 @@
   
   @media screen and (max-width: 1024px) {
     padding: 56px 0 112px;
+    flex-direction: column-reverse;
   }
 
   @media screen and (max-width: 768px) {
@@ -24,6 +25,11 @@
   flex-direction: column;
   max-width: 627px;
   text-align: right;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+    text-align: left;
+  }
 }
 
 
@@ -50,6 +56,19 @@
 .specifications {
   display: flex;
   justify-content: space-evenly;
+
+  @media screen and (max-width: 1440px) {}
+  
+  @media screen and (max-width: 1024px) {
+    justify-content: flex-start;
+    padding-bottom: 72px;
+  }
+
+  @media screen and (max-width: 768px) {}
+
+  @media screen and (max-width: 375px) {
+    padding-bottom: 56px;
+  }
 }
 
 .info {
@@ -58,6 +77,13 @@
   justify-content: flex-start;
   align-items: center;
   position: relative;
+
+  &:nth-child(2) {
+  
+    @media screen and (max-width: 1024px) {
+      margin-left: 35px;
+    }
+  }
 }
 
 .loadedCircle {
@@ -88,7 +114,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .characteristicsImageWrap {
@@ -98,7 +125,9 @@
     margin-right: 72px;
   }
   
-  @media screen and (max-width: 1024px) {}
+    @media screen and (max-width: 1024px) {
+      margin-left: 0;
+    }
 
   @media screen and (max-width: 768px) {}
 
@@ -107,6 +136,22 @@
 
 .characteristicsImage {
   width: 100%;
+  object-fit: cover;
+
+  @media screen and (max-width: 1440px) {
+    max-width: 662px;
+    height: 396px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 768px) {}
+
+  @media screen and (max-width: 375px) {}
 }
 
 /* 

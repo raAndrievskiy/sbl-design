@@ -28,7 +28,7 @@ export const Description: React.FC = () => {
               start: item.start,
               end: item.end,
               scrub: true,
-              markers: true,
+              // markers: true,
             },
           }}>
           <span className={styles.imgDescription}>{item.description}</span>

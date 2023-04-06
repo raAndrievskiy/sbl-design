@@ -38,7 +38,7 @@ export const Description: React.FC<DescriptionProps> = ({
           start: start,
           end: end,
           scrub: true,
-          markers: true,
+          // markers: true,
         },
       }}>
       <span className={styles.imgDescription}>{description}</span>

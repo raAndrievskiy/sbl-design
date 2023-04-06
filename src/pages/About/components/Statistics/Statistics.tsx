@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container } from '../../../../components'
 
+import { Container } from '../../../../components'
 import { textData } from './textData'
 import styles from './styles.module.scss'
 
@@ -9,8 +9,10 @@ export const Statistics: React.FC = () => {
     <div className={styles.statistics}>
       <Container>
         <div className={styles.statisticsBlockWrap}>
-          {textData.map(text => (
-            <div key={text.id} className={styles.statisticsBlock}>
+          {textData.map((text, index) => (
+            <div
+              key={text.id}
+              className={`${styles.statisticsBlock} statisticsBlockTrigger`}>
               <span className={`color-white ${styles.blockTitle}`}>
                 {text.title}
               </span>

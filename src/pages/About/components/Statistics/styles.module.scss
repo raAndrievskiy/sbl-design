@@ -35,13 +35,15 @@
   }
 }
 
+
 .statisticsBlock {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
   padding: 72px 122px 106px 40px;
-  border: 1px solid #f6f6f6;
+  position: relative;
+  border: 1px solid #F6F6F6;
 
   @media screen and (max-width: 1440px) {
     padding: 40px 32px 72px;
