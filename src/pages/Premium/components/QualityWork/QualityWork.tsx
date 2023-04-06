@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-
 import { Container, LineWhite } from '../../../../components'
+
 import styles from './styles.module.scss'
 
 export const QualityWork: React.FC = () => {
@@ -27,7 +27,7 @@ export const QualityWork: React.FC = () => {
 
   const circleStyle = {
     left: position.x === 0 ? '50%' : position.x,
-    transition: 'all 1s ease-out',
+    // transition: 'all 0s ease-out',
   }
 
   return (

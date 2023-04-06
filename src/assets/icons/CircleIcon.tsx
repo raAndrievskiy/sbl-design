@@ -1,11 +1,12 @@
 import { IconProps } from './types'
 
-export const CircleIcon = ({ className }: IconProps) => {
+export const CircleIcon = ({ className, style }: IconProps) => {
   return (
     <svg
       className={className}
       // width="1556"
       // height="1556"
+      style={style}
       viewBox="0 0 1556 1556"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">

@@ -14,13 +14,13 @@ const App: React.FC = () => {
   useEffect(() => {
     const app = appRef.current
 
-    gsap.to(app, {
+    gsap.timeline({
+      app,
       scrollTrigger: {
         trigger: app,
         start: 'top top',
-        end: 'bottom bottom',
-        scrub: 60,
-        markers: true,
+        end: 'top+=800vh bottom',
+        // markers: true,
       },
     })
   }, [])

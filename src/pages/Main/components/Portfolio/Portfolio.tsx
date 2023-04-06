@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
-import gsap from 'gsap'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { gsap } from 'gsap'
+
 import { CircleIcon } from '../../../../assets/icons'
 import { Title } from '../../../../components'
 import { portfolioImagesData } from './portfolioImagesData'
@@ -7,48 +8,46 @@ import { portfolioImagesData } from './portfolioImagesData'
 import styles from './styles.module.scss'
 
 export const Portfolio: React.FC = () => {
-  const portfolioImagesRef = React.useRef<HTMLDivElement>(null)
+  const [position, setPosition] = useState({ x: 0, y: 0 })
+  const portfolioRef = useRef<HTMLDivElement>(null)
+  const itemRefs = useRef<Array<HTMLImageElement | null>>([])
 
   useEffect(() => {
-    const portfolio = portfolioImagesRef.current
-    let rect = portfolio?.getBoundingClientRect()
-    let mouse = { x: 0, y: 0, moved: false }
+    gsap.to(itemRefs.current, {
+      x: (index, target) => {
+        const item = portfolioImagesData[index]
+        return (position.x / 50) * item.x
+      },
+      y: (index, target) => {
+        const item = portfolioImagesData[index]
+        return (position.y / 50) * item.y
+      },
+      ease: 'power2.out',
+    })
+  }, [position])
 
-    if (!portfolio) return
+  useLayoutEffect(() => {
+    const portfolio = portfolioRef.current
 
-    const handleMouseMove = (event: any) => {
-      mouse.moved = true
-      mouse.x = event.clientX - (rect?.x || 0)
-      const tl = gsap.timeline()
-
-      function parallaxIt(target: any, movement: any) {
-        tl.to(target, {
-          duration: 0.5,
-          x:
-            ((mouse.x - (rect?.width || 0) / 2) / (rect?.width || 0)) *
-            movement,
-          y:
-            ((mouse.y - (rect?.height || 0) / 2) / (rect?.height || 0)) *
-            movement,
-        })
-      }
-
-      const mouseMoved = () => {
-        if (mouse.moved) {
-          parallaxIt('.test', -30)
-        }
-        mouse.moved = false
-      }
-
-      gsap.ticker.add(mouseMoved)
+    const setFromEvent = (event: any) => {
+      setPosition({ x: event.clientX, y: event.clientY })
     }
 
-    portfolio.addEventListener('mousemove', handleMouseMove)
+    if (portfolio) {
+      portfolio.addEventListener('mousemove', setFromEvent)
+    }
 
     return () => {
-      portfolio.removeEventListener('mousemove', handleMouseMove)
+      if (portfolio) {
+        portfolio.removeEventListener('mousemove', setFromEvent)
+      }
     }
-  }, [portfolioImagesRef])
+  }, [])
+
+  const circleStyle = {
+    left: position.x,
+    top: position.y,
+  }
 
   return (
     <div className={`${styles.portfolio} portfolio`}>
@@ -59,12 +58,18 @@ export const Portfolio: React.FC = () => {
         ты входишь в них с головой и со всем вниманием к процессу не ожидая
         ничего взамен.
       </span>
-      <div className={styles.portfolioImages} ref={portfolioImagesRef}>
-        <CircleIcon className={styles.circleIcon} />
-        {portfolioImagesData.map(images => (
+      <div className={styles.portfolioImages} ref={portfolioRef}>
+        <CircleIcon
+          className={`${styles.circleIcon} circleIcon`}
+          // style={circleStyle}
+        />
+        {portfolioImagesData.map((images, index) => (
           <img
-            className={`${styles['portfolioImage' + images.id]} test`}
+            className={`${images.className} ${
+              styles['portfolioImage' + images.id]
+            }`}
             src={images.src}
+            ref={ref => (itemRefs.current[index] = ref)}
             alt=""
             key={images.id}
           />
