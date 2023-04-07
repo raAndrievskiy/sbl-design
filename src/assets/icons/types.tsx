@@ -10,4 +10,6 @@ export interface CharacteristicsCircleIconProps {
   className?: string
   svgDrawTo?: number
   startTrigger?: string
+  width?: number
+  height?: number
 }

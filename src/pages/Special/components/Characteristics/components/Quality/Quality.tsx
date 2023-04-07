@@ -1,8 +1,8 @@
 import React from 'react'
 
 import qualityElevatorImg from '../../../../../../assets/images/special/characteristics/qualityElevator.png'
-import styles from './styles.module.scss'
 import { CharacteristicsCircleIcon } from '../../../../../../assets/icons'
+import styles from './styles.module.scss'
 
 export const Quality: React.FC = () => {
   return (

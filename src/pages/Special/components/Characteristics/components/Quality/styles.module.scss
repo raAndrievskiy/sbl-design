@@ -60,7 +60,7 @@
   @media screen and (max-width: 1440px) {}
   
   @media screen and (max-width: 1024px) {
-    justify-content: flex-start;
+    justify-content: space-between;
     padding-bottom: 72px;
   }
 
@@ -78,11 +78,8 @@
   align-items: center;
   position: relative;
 
-  &:nth-child(2) {
-  
-    @media screen and (max-width: 1024px) {
-      margin-left: 35px;
-    }
+  @media screen and (max-width: 1024px) {
+    width: 120px;
   }
 }
 
@@ -104,6 +101,11 @@
   position: relative;
   border-radius: 50%;
   border: 2px solid #D9D9D9;
+
+  @media screen and (max-width: 1024px) {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .circleText {
@@ -116,6 +118,11 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+
+  @media screen and (max-width: 1024px) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .characteristicsImageWrap {
@@ -125,9 +132,9 @@
     margin-right: 72px;
   }
   
-    @media screen and (max-width: 1024px) {
-      margin-right: 0;
-    }
+  @media screen and (max-width: 1024px) {
+    margin-right: 0;
+  }
 
   @media screen and (max-width: 768px) {}
 

@@ -2,6 +2,7 @@ import gsap from 'gsap'
 import { Tween } from 'react-gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { CharacteristicsCircleIconProps } from './types'
+import useWindowSize from '../../hook/useWindowSize'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -10,12 +11,14 @@ export const CharacteristicsCircleIcon = ({
   svgDrawTo,
   startTrigger,
 }: CharacteristicsCircleIconProps) => {
+  const [width] = useWindowSize()
+
   return (
     <svg
-      width="173"
-      height="173"
+      width={width > 1024 ? '173' : '120'}
+      height={width > 1024 ? '173' : '120'}
       className={className}
-      viewBox="0 0 173 173"
+      viewBox={width > 1024 ? '0 0 173 173' : '0 0 120 120'}
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <Tween
@@ -31,9 +34,9 @@ export const CharacteristicsCircleIcon = ({
         }}>
         <circle
           id="target"
-          r="84.5"
-          cx="86.5"
-          cy="86.5"
+          r={width > 1024 ? '84.5' : '58'}
+          cx={width > 1024 ? '86.5' : '60'}
+          cy={width > 1024 ? '86.5' : '60'}
           fill="none"
           stroke="#282728"
           strokeWidth="4"
