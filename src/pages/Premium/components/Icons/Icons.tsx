@@ -8,7 +8,7 @@ export const Icons: React.FC = () => {
   return (
     <div className={styles.premiumIcons}>
       <Container>
-        <StylishIcon />
+        <StylishIcon className={styles.stylish} />
         <UniquelyIcon />
         <BestIcon />
       </Container>
