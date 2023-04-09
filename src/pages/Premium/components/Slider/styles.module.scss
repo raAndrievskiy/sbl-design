@@ -18,6 +18,17 @@
   }
 }
 
+.sliderWrap {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.slider {
+  &:-webkit-scrollbar {
+    display: none;
+  }
+}
+
 /*
 
 @media screen and (max-width: 1440px) {}
