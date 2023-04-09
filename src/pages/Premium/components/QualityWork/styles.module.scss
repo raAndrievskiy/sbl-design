@@ -37,7 +37,7 @@
   text-transform: uppercase;
   user-select: none;
 
-  &:first-child, &:last-child {
+  &:first-child, &:nth-child(7) {
     font-style: italic;
   }
 

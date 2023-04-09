@@ -27,7 +27,6 @@ export const QualityWork: React.FC = () => {
 
   const circleStyle = {
     left: position.x === 0 ? '50%' : position.x,
-    // transition: 'all 0s ease-out',
   }
 
   return (
