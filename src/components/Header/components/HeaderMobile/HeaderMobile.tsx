@@ -10,6 +10,12 @@ export const HeaderMobile: React.FC = () => {
 
   const openBurger = () => setShowBurger(!showBurger)
 
+  if (showBurger) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'visible'
+  }
+
   return (
     <header className={styles.headerWrap}>
       <Container>
@@ -30,34 +36,34 @@ export const HeaderMobile: React.FC = () => {
           />
         </div>
       </Container>
-      {showBurger ? (
-        <div className={styles.burgerWrap}>
-          <NavLink
-            to="/premium"
-            className={`${styles.link} color-white`}
-            onClick={() => setShowBurger(false)}>
-            Premium
-          </NavLink>
-          <NavLink
-            to="/special"
-            className={`${styles.link} color-white`}
-            onClick={() => setShowBurger(false)}>
-            Special
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={`${styles.link} color-white`}
-            onClick={() => setShowBurger(false)}>
-            О компании
-          </NavLink>
-          <NavLink
-            to="/"
-            className={`${styles.link} color-white`}
-            onClick={() => setShowBurger(false)}>
-            Контакты
-          </NavLink>
-        </div>
-      ) : null}
+      {/* {showBurger ? ( */}
+      <div className={showBurger ? styles.burgerWrap : styles.burgerWrapClose}>
+        <NavLink
+          to="/premium"
+          className={styles.link}
+          onClick={() => setShowBurger(false)}>
+          Premium
+        </NavLink>
+        <NavLink
+          to="/special"
+          className={styles.link}
+          onClick={() => setShowBurger(false)}>
+          Special
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={styles.link}
+          onClick={() => setShowBurger(false)}>
+          О компании
+        </NavLink>
+        <NavLink
+          to="/"
+          className={styles.link}
+          onClick={() => setShowBurger(false)}>
+          Контакты
+        </NavLink>
+      </div>
+      {/* ) : null} */}
     </header>
   )
 }
