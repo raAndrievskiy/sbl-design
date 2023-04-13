@@ -30,7 +30,7 @@ export const Main: React.FC = () => {
 
   return (
     <>
-      {/* {isLoading ? <Preloader /> : null} */}
+      {/* <Preloader /> */}
       <FullScreenVideoText />
       <BubblesInfo />
       <About />

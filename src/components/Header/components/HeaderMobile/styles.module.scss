@@ -5,12 +5,14 @@
   top: 0;
   left: 0;
   background: rgba(154, 154, 154, 0.7);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   z-index: 99;
   border-bottom: 1px solid #F6F6F6;
 }
 
 .header {
+  height: 72.5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,17 +25,17 @@
 }
 
 .logo {
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
 }
 
-.burgerWrap {
-  border-left: 1px solid #F6F6F6;
-}
-
 .burger {
+  border-left: 1px solid #F6F6F6;
   padding: 24px 8px 24px 40px;
   height: 100%;
-
+  transform: translateX(0px) translateY(0px) rotate(0deg);
+  
   &::before {
     content: '';
     display: block;
@@ -41,6 +43,9 @@
     height: 1px;
     background: #F6F6F6;
     margin-bottom: 16px;
+    transition: transform 0.5s;
+    -webkit-animation: burgerBeforeClose 0.5s forwards;
+      animation: burgerBeforeClose 0.5s forwards;
   }
 
   &::after {
@@ -49,13 +54,97 @@
     width: 48px;
     height: 1px;
     background: #F6F6F6;
+    transition: transform 0.5s;
+    -webkit-animation: burgerAfterClose 0.5s forwards;
+      animation: burgerAfterClose 0.5s forwards;
   }
 
   @media screen and (max-width: 768px) {
     padding: 24px 16px 24px 32px;
   }
-
 }
+
+@keyframes burgerBeforeClose {
+  from {
+    transform: translateX(3px) translateY(8px) rotate(225deg);
+  }
+
+ to {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+  }
+}
+
+
+@keyframes burgerAfterClose {
+  from {
+    transform: translateX(0px) translateY(-9px) rotate(-45deg);
+  }
+
+ to {
+    transform: translateX(0px) translateY(0px) rotate(0);
+  }
+}
+
+
+.burger.burgerOpen {
+  &::before {
+    -webkit-animation: burgerBeforeOpen 1.8s forwards;
+            animation: burgerBeforeOpen 1.8s forwards;
+  }
+    
+    &::after {
+    -webkit-animation: burgerAfterOpen 1.8s forwards;
+            animation: burgerAfterOpen 1.8s forwards;
+  }
+}
+
+@keyframes burgerBeforeOpen {
+  0% {
+    transform: translateX(3px) translateY(8px) rotate(0deg);
+  } 50% {
+    transform: translateX(3px) translateY(8px) rotate(90deg);
+  } 100% {
+    transform: translateX(3px) translateY(8px) rotate(225deg);
+  }
+}
+
+
+@keyframes burgerAfterOpen {
+  0% {
+    transform: translateX(-3px) translateY(-8px) rotate(0deg);
+  } 50% {
+    transform: translateX(-3px) translateY(-8px) rotate(90deg);
+  } 100% {
+    transform: translateX(0px) translateY(-9px) rotate(-45deg);
+  }
+}
+
+.burgerWrap {
+  position: absolute;
+  top: 73.5px;
+  right: 0;
+  width: 100vw;
+  height: calc(100vh - 73.5px);
+  background: #282728;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 32px;
+}
+
+.link {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  padding: 10px 0;
+
+  &:nth-child(2) {
+    border-bottom: 1px solid rgba(246, 246, 246, 0.5);
+  }
+}
+
+
+
 
 
 // @media screen and (max-width: 1440px) {

@@ -3,9 +3,11 @@ import { Suspense, useRef, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Image, ScrollControls, Scroll, useScroll, } from '@react-three/drei'
 import { useSnapshot } from 'valtio'
+
 import { Minimap } from './Minimap'
 import { state, damp } from './util'
 import styles from './styles.module.scss'
+
 
 function Item({ index, position, scale, className, c = new THREE.Color(), ...props }) {
   const ref = useRef()
@@ -32,9 +34,8 @@ function Items({ w = 0.7, gap = 0.15 }) {
   const { urls } = useSnapshot(state)
   const { width } = useThree((state) => state.viewport)
   const xW = w + gap
-  
   return (
-     <ScrollControls horizontal pages={(width - xW + urls.length * xW) / width}>
+     <ScrollControls horizontal pages={(width - xW + urls.length * xW) / width} >
       <Minimap />
       <Scroll>
         {urls.map((url, i) => (
@@ -47,11 +48,11 @@ function Items({ w = 0.7, gap = 0.15 }) {
 }
 
 export const Slider = () => (
-  <div className={styles.sliderWrap}>
+  <div className={`${styles.sliderWrap} sliderTrigger`}>
     <Suspense fallback={null}>
       <Canvas gl={{ alpha: false, antialias: true, stencil: false, depth: false }} linear={true} flat={false} dpr={[1, 1.5]} onPointerMissed={() => (state.clicked = null)}>
         <Items />
       </Canvas>
-    </ Suspense>
+    </Suspense>
   </div>
 )
