@@ -4,6 +4,8 @@ export interface IconProps {
   className?: string
   style?: object
   ref?: any
+  title?: string
+  description?: string
 }
 
 export interface CharacteristicsCircleIconProps {
