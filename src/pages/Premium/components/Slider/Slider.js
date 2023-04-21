@@ -1,19 +1,23 @@
+import { Suspense, useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
-import { Suspense, useRef, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Image, ScrollControls, Scroll, useScroll, } from '@react-three/drei'
 import { useSnapshot } from 'valtio'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-import { Minimap } from './Minimap'
 import { state, damp } from './util'
 import styles from './styles.module.scss'
+import { useDrag } from 'react-use-gesture'
 
+gsap.registerPlugin(ScrollTrigger)
 
 function Item({ index, position, scale, className, c = new THREE.Color(), ...props }) {
   const ref = useRef()
   const scroll = useScroll()
   const { clicked, urls } = useSnapshot(state)
   const [hovered, hover] = useState(false)
+  
   const click = () => (state.clicked = index === clicked ? null : index)
   const over = () => hover(true)
   const out = () => hover(false)
@@ -34,12 +38,12 @@ function Items({ w = 0.7, gap = 0.15 }) {
   const { urls } = useSnapshot(state)
   const { width } = useThree((state) => state.viewport)
   const xW = w + gap
+
   return (
-     <ScrollControls horizontal pages={(width - xW + urls.length * xW) / width} >
-      <Minimap />
+     <ScrollControls horizontal className={styles.slider} pages={(width - xW + urls.length * xW) / width}>
       <Scroll>
         {urls.map((url, i) => (
-          <Item key={i} className={styles.slider} index={i} position={[i * xW, 0, 0]} scale={[w, 4, 1]} url={`${url}`} />
+          <Item key={i} index={i} position={[i * xW, 0, 0]} scale={[w, 4, 1]} url={`${url}`} />
           )
         )}
       </Scroll>
@@ -47,12 +51,41 @@ function Items({ w = 0.7, gap = 0.15 }) {
   )
 }
 
-export const Slider = () => (
-  <div className={`${styles.sliderWrap} sliderTrigger`}>
-    <Suspense fallback={null}>
-      <Canvas gl={{ alpha: false, antialias: true, stencil: false, depth: false }} linear={true} flat={false} dpr={[1, 1.5]} onPointerMissed={() => (state.clicked = null)}>
-        <Items />
-      </Canvas>
-    </Suspense>
-  </div>
-)
+export const Slider = () => {
+  const sliderRef = useRef(null)
+
+  useEffect(() => {
+    const slider = sliderRef.current
+
+    const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.sliderTrigger',
+      start: 'top top',
+      end: 'bottom bottom',
+      // end: 'bottom-=10vh center',
+      scrub: 0.5,
+      pin: true,
+      markers: true,
+    },
+  })
+
+  // tl.fromTo('.sliderTrigger', { marginBottom: 0 }, { marginBottom: 0 })
+  // tl.to(slider, {y: 500 })
+  
+  return () => {
+    tl.kill()
+  }
+
+  }, [])
+  return (
+    <div className={`${styles.sliderWrap} sliderTrigger`} >
+      <div className={styles.slider} ref={sliderRef}>
+        <Suspense fallback={null}>
+          <Canvas gl={{ alpha: false, antialias: true, stencil: false, depth: false }} linear={true} flat={false} dpr={[1, 1.5]} onPointerMissed={() => (state.clicked = null)}>
+            <Items />
+          </Canvas>
+        </Suspense>
+      </div>
+    </div>
+  )
+}

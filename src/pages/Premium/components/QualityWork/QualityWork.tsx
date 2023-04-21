@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { Container, LineWhite } from '../../../../components'
 
+import { Container, LineWhite } from '../../../../components'
+import useWindowSize from '../../../../hook/useWindowSize'
 import styles from './styles.module.scss'
 
 export const QualityWork: React.FC = () => {
   const [position, setPosition] = useState({ x: 0 })
   const circleRef = React.useRef<HTMLDivElement>(null)
+  const [width] = useWindowSize()
 
   useEffect(() => {
     const setFromEvent = (event: any) => {
@@ -14,16 +16,16 @@ export const QualityWork: React.FC = () => {
 
     const circle = circleRef.current
 
-    if (circle) {
+    if (circle && width > 1024) {
       circle.addEventListener('mousemove', setFromEvent)
     }
 
     return () => {
-      if (circle) {
+      if (circle && width > 1024) {
         circle.removeEventListener('mousemove', setFromEvent)
       }
     }
-  }, [])
+  }, [width])
 
   const circleStyle = {
     left: position.x === 0 ? '50%' : position.x,
@@ -40,8 +42,11 @@ export const QualityWork: React.FC = () => {
             </span>
             <LineWhite />
             <span className={`${styles.qualityText} color-white`}>
-              Точно в срок
+              Точно
+              <span className={`${styles.qualityText} mx color-white`}>в</span>
+              срок
             </span>
+
             <LineWhite />
             <span className={`${styles.qualityText} color-white`}>
               Братья Савичевы

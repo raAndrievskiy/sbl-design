@@ -24,7 +24,6 @@ export const AnimationTextAndImage: React.FC = () => {
                 end: 'bottom+=40vh 100%',
                 scrub: true,
                 pin: '.premiumTextTrigger',
-                // markers: true,
               },
             }}
             stagger={0.1}>

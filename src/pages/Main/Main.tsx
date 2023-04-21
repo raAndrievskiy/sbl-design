@@ -24,9 +24,7 @@ export const Main: React.FC = () => {
     }
   })
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  window.scrollTo(0, 0)
 
   return (
     <>

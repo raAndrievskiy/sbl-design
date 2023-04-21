@@ -60,7 +60,6 @@ export const BubblesForTablet = React.forwardRef<SVGSVGElement, IconProps>(
               start: '850vh 100vh',
               end: '80% 100%',
               scrub: 2,
-              // markers: true,
             },
           }}>
           <g>

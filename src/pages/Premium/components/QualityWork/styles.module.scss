@@ -20,6 +20,15 @@
   z-index: -1;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+
+  @media screen and (max-width: 1440px) {}
+  
+  @media screen and (max-width: 1024px) {}
+
+  @media screen and (max-width: 768px) {
+  }
+
+  @media screen and (max-width: 375px) {}
 }
 
 .qualityTextWrap {
@@ -36,6 +45,7 @@
   line-height: 142px;
   text-transform: uppercase;
   user-select: none;
+  display: flex;
 
   &:first-child, &:nth-child(7) {
     font-style: italic;
@@ -46,11 +56,20 @@
     line-height: 69px;
   }
 
-  @media screen and (max-width: 1024px) {}
+  @media screen and (max-width: 1024px) {
+    font-size: 50px;
+    line-height: 59px;
+  }
 
-  @media screen and (max-width: 768px) {}
+  @media screen and (max-width: 768px) {
+    font-size: 43px;
+    line-height: 51px;
+  }
 
-  @media screen and (max-width: 375px) {}
+  @media screen and (max-width: 375px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 

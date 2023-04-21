@@ -19,15 +19,15 @@ export const Icons: React.FC = () => {
           description="Разрабатывая подобные идеи ты входишь в них с головой и со всем вниманием"
         />
         <UniquelyIcon
-          width={width > 1440 ? 414 : 343}
-          height={width > 1440 ? 414 : 343}
+          width={width > 1440 ? 343 : 243}
+          height={width > 1440 ? 343 : 243}
           className={styles.uniquelyIcon}
           title="Уникальные"
           description="Разрабатывая подобные идеи ты входишь в них с головой и со всем вниманием"
         />
         <BestIcon
-          width={width > 1440 ? 408 : 343}
-          height={width > 1440 ? 408 : 343}
+          width={width > 1440 ? 343 : 243}
+          height={width > 1440 ? 343 : 243}
           className={styles.bestIcon}
           title="Лучшие"
           description="Разрабатывая подобные идеи ты входишь в них с головой и со всем вниманием"

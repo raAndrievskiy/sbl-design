@@ -4,7 +4,9 @@ import { Info, Statistics, History } from './components'
 
 export const About: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.addEventListener('beforeunload', function () {
+      window.scrollTo(0, 0)
+    })
   }, [])
   return (
     <>
