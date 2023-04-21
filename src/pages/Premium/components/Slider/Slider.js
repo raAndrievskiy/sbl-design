@@ -62,15 +62,10 @@ export const Slider = () => {
       trigger: '.sliderTrigger',
       start: 'top top',
       end: 'bottom bottom',
-      // end: 'bottom-=10vh center',
       scrub: 0.5,
       pin: true,
-      markers: true,
     },
   })
-
-  // tl.fromTo('.sliderTrigger', { marginBottom: 0 }, { marginBottom: 0 })
-  // tl.to(slider, {y: 500 })
   
   return () => {
     tl.kill()
