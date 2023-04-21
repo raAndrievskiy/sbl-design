@@ -8,7 +8,6 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 import { state, damp } from './util'
 import styles from './styles.module.scss'
-import { useDrag } from 'react-use-gesture'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -55,8 +54,6 @@ export const Slider = () => {
   const sliderRef = useRef(null)
 
   useEffect(() => {
-    const slider = sliderRef.current
-
     const tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.sliderTrigger',
