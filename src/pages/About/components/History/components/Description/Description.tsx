@@ -36,7 +36,7 @@ export const Description: React.FC = () => {
         end: 'bottom center',
         // end: 'bottom-=10vh center',
         scrub: 0.5,
-        markers: true,
+        // markers: true,
       },
     })
 
