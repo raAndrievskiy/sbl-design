@@ -16,7 +16,7 @@ export const Premium: React.FC = () => {
       {/* <AnimationTextAndImage /> */}
       <Icons />
       <Slider />
-      {/* <QualityWork /> */}
+      <QualityWork />
     </>
   )
 }

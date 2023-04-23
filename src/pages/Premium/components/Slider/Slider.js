@@ -69,9 +69,8 @@ export const Slider = () => {
         start: "top top",
         end: "bottom bottom",
         scrub: true,
-        markers: true,
       },
-        onComplete: () => {
+      onComplete: () => {
         slider.style.position = "absolute";
       }
     });
