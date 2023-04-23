@@ -23,7 +23,7 @@ export const AnimationTextAndImage: React.FC = () => {
                 start: 'top+=90vh 100vh',
                 end: 'bottom+=40vh 100%',
                 scrub: true,
-                pin: '.premiumTextTrigger',
+                // pin: '.premiumTextTrigger',
               },
             }}
             stagger={0.1}>

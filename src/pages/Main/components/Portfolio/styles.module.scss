@@ -1,12 +1,16 @@
 .portfolio {
   overflow: hidden;
-  height: 300vh;
+  height: 250vh;
+
+  @media screen and (max-width: 768px) {
+    height: 200vh;
+  }
 }
 
 .portfolioDescription {
   font-size: 24px;
   line-height: 28px;
-  padding-top: 164px;
+  padding-top: 8.54vw;
   display: block;
   max-width: 535px;
   margin: 0 18.34vw 0 auto;

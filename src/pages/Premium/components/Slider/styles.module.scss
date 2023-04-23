@@ -20,18 +20,24 @@
 
 .sliderWrap {
   overflow-x: hidden;
-  // height: 300vh;
+  height: 300vh;
+  position: relative;
 }
 
 .slider {
   width: 100vw;
   height: 100vh;
-  position: sticky;
-  top: 0;
-  // &:-webkit-scrollbar {
-  //   display: none;
-  // }
-  // scrollbar-width: none;
+  left: 0;
+  bottom: 0;
+  scrollbar-width: none;
+
+  > div:last-child {
+    &:-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0ж
+    }
+  }
 }
 
 /*

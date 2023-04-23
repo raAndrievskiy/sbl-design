@@ -1,9 +1,12 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 import { Container } from '../../../../components'
 import { AboutTitle, Description, Images, Subtitle } from './components'
 import styles from './styles.module.scss'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export const History: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null)
@@ -16,7 +19,7 @@ export const History: React.FC = () => {
         trigger: element,
         start: 'top top',
         end: 'bottom bottom',
-        pin: true,
+        // pin: true,
         // markers: true,
       },
     })
@@ -25,6 +28,13 @@ export const History: React.FC = () => {
       tl.kill()
     }
   }, [])
+
+  // const triggerRef = useRef(null)
+  // const [trigger, setTrigger] = useState(triggerRef.current)
+  // useEffect(() => {
+  //   setTrigger(triggerRef.current)
+  // }, [])
+
   return (
     <div className={`${styles.history} historyTrigger`} ref={ref}>
       <Container>

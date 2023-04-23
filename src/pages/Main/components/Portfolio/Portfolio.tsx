@@ -29,14 +29,11 @@ export const Portfolio: React.FC = () => {
     })
 
     if (circleRef.current) {
-      console.log('circleRef.curren: ', circleRef.current)
       gsap.to(circleRef.current, {
         x: index => {
-          console.log('index:ч ', index)
           return -(circle.x / 50)
         },
         y: (index, target) => {
-          console.log('index:н ', index)
           return -(circle.y / 50)
         },
         ease: 'power2.out',
@@ -62,11 +59,6 @@ export const Portfolio: React.FC = () => {
       }
     }
   }, [])
-
-  const circleStyle = {
-    left: position.x,
-    top: position.y,
-  }
 
   return (
     <Link to="/about">

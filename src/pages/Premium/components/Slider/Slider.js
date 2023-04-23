@@ -1,6 +1,6 @@
-import {  useRef, useState } from 'react'
+import {  useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as THREE from 'three'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Image, ScrollControls, Scroll, useScroll } from '@react-three/drei'
@@ -9,17 +9,13 @@ import { useSnapshot } from 'valtio'
 import { state, damp } from './util'
 import styles from './styles.module.scss'
 
-gsap.registerPlugin(ScrollTrigger)
-
 
 function Item({ index, position, scale, onPointerDown, className, c = new THREE.Color(), ...props }) {
+  gsap.registerPlugin(ScrollTrigger)
   const ref = useRef()
   const scroll = useScroll()
   const { clicked, urls } = useSnapshot(state)
   const [hovered, hover] = useState(false)
-  
-  // const xScroll = () => scroll.curve(index / urls.length - 1.5 / urls.length, 4 / urls.length)
-
 
   const click = () => (state.clicked = index === clicked ? null : index)
   const over = () => hover(true)
@@ -35,10 +31,7 @@ function Item({ index, position, scale, onPointerDown, className, c = new THREE.
     ref.current.material.color.lerp(c.set(hovered || clicked === index ? 'white' : '#aaa'), hovered ? 0.3 : 0.1)
   })
   return <Image className={className}
-  ref={ref} {...props} position={position} scale={scale} onClick={click} 
-  // onPointerDown={(e) => onPointerDown(e)}
-  // onWheel={(e) => scroll.onWheel()}
-  onPointerOver={over} onPointerOut={out} />
+  ref={ref} {...props} position={position} scale={scale} onClick={click} onPointerOver={over} onPointerOut={out} />
 }
 
 function Items({ w = 0.7, gap = 0.15 }) {
@@ -61,12 +54,33 @@ function Items({ w = 0.7, gap = 0.15 }) {
 }
 
 export const Slider = () => {
+  const sliderWrapTriggerRef = useRef(null);
+  const sliderTriggerRef = useRef(null);
+  
 
+  useEffect(() => {
+    const sliderWrap = sliderWrapTriggerRef.current;
+    const slider = sliderTriggerRef.current;
+
+    gsap.to(slider, {
+      position: 'fixed',
+      scrollTrigger: {
+        trigger: sliderWrap,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+        markers: true,
+      },
+        onComplete: () => {
+        slider.style.position = "absolute";
+      }
+    });
+
+  }, []);
   return (
-    <div className={`${styles.sliderWrap} sliderWrap`}>
-      <div className={styles.slider}>
-          <Canvas gl={{ alpha: false, antialias: true, stencil: false, depth: false }} linear={true} flat={false} dpr={[1, 1.5]} 
-          onPointerDown={(e) => console.log('down')} 
+    <div className={styles.sliderWrap} ref={sliderWrapTriggerRef}>
+      <div className={`${styles.slider} sliderWrap`} ref={sliderTriggerRef}>
+          <Canvas gl={{ alpha: false, antialias: true, stencil: false, depth: false }} linear={true} dpr={[1, 1.5]} 
           onPointerMissed={() => (state.clicked = null)}>
             <Items />
           </Canvas>
