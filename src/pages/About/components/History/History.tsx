@@ -38,7 +38,7 @@ export const History: React.FC = () => {
     <div className={`${styles.history} historyTrigger`}>
       <Container>
         <div className={styles.historyWrap}>
-          <AboutTitle children="Начало" />
+          {/* <AboutTitle children="Начало" /> */}
           <div className={styles.historyImgWrap}>
             <Subtitle
               children="Разрабатывая подобные идеи ты входишь в них с головой и со всем

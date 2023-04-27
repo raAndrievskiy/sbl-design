@@ -1,14 +1,37 @@
 .elevator {
-  margin-bottom: 272px;
+  
   // visibility: hidden;
 
+  &:not(:last-child) {
+    margin-bottom: 272px;
+  }
+
+  &:last-child {
+    margin-bottom: 211px;
+  }
   
   @media screen and (max-width: 1440px) {
     width: 368px;
-    margin-bottom: 184px;
+
+    &:not(:last-child) {
+      margin-bottom: 184px;
+    }
+
+    &:last-child {
+      margin-bottom: 158px;
+    }
   }
 
-  @media screen and (max-width: 1024px) {}
+  @media screen and (max-width: 1024px) {
+
+    &:not(:last-child) {
+      margin-bottom: 120px;
+    }
+
+    &:last-child {
+      margin-bottom: 143px;
+    }
+  }
 
   @media screen and (max-width: 768px) {}
 

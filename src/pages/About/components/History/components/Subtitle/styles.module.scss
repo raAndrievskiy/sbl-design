@@ -28,13 +28,15 @@
   max-width: 500px;
   width: 100%;
   position: static;
-  bottom: 30vh;
-  left: 2.2vw;
+  bottom: 38vh;
+  left: 58px;
 
   @media screen and (max-width: 1440px) {
     font-size: 20px;
     line-height: 24px;
     max-width: 400px;
+    left: 32px;
+    bottom: 29vh;
   }
   
   @media screen and (max-width: 1024px) {
@@ -45,6 +47,7 @@
     font-size: 16px;
     line-height: 19px;
     max-width: 500px;
+    left: 16px;
   }
 
   @media screen and (max-width: 375px) {
