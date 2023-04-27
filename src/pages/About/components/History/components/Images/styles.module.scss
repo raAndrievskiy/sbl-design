@@ -1,7 +1,10 @@
+.elevatorWrap {
+  display: flex;
+  flex-direction: column;
+}
+
 .elevator {
   
-  // visibility: hidden;
-
   &:not(:last-child) {
     margin-bottom: 272px;
   }
