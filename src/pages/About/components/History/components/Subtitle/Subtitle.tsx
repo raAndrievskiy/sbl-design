@@ -22,6 +22,7 @@ export const Subtitle: React.FC<SubtitleProps> = ({ children }) => {
     if (subtitleWrap && subtitle) {
       gsap.to(subtitle, {
         position: 'fixed',
+        left: '2.2vw',
         scrollTrigger: {
           trigger: subtitleWrap,
           start: 'top-=350vh top',
@@ -31,6 +32,7 @@ export const Subtitle: React.FC<SubtitleProps> = ({ children }) => {
         },
         onComplete: () => {
           subtitle.style.position = 'absolute'
+          subtitle.style.left = '0vw'
         },
       })
     }
