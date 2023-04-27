@@ -10,27 +10,27 @@ gsap.registerPlugin(ScrollTrigger)
 export const Images: React.FC = () => {
   const imageRef1 = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        // trigger: '.historyTrigger',
-        trigger: imageRef1.current,
-        start: 'top-=340vh top',
-        end: 'bottom-=900vh bottom',
-        scrub: 0.5,
-        // markers: true,
-      },
-    })
+  // useEffect(() => {
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       // trigger: '.historyTrigger',
+  //       trigger: imageRef1.current,
+  //       start: 'top-=340vh top',
+  //       end: 'bottom-=900vh bottom',
+  //       scrub: 0.5,
+  //       // markers: true,
+  //     },
+  //   })
 
-    tl.fromTo(imageRef1.current, { y: 0 }, { y: '-75%' })
+  //   tl.fromTo(imageRef1.current, { y: 0 }, { y: '-75%' })
 
-    return () => {
-      tl.kill()
-      if (tl.scrollTrigger) {
-        tl.scrollTrigger.kill()
-      }
-    }
-  }, [])
+  //   return () => {
+  //     tl.kill()
+  //     if (tl.scrollTrigger) {
+  //       tl.scrollTrigger.kill()
+  //     }
+  //   }
+  // }, [])
 
   return (
     <div

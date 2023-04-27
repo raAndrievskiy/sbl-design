@@ -9,34 +9,33 @@ import styles from './styles.module.scss'
 gsap.registerPlugin(ScrollTrigger)
 
 export const History: React.FC = () => {
-  const ref = useRef<HTMLDivElement>(null)
+  // const historyRef = useRef<HTMLDivElement>(null)
+  // const historyImgWrapRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const element = ref.current
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: element,
-        start: 'top top',
-        end: 'bottom bottom',
-        // pin: true,
-        // markers: true,
-      },
-    })
-
-    return () => {
-      tl.kill()
-    }
-  }, [])
-
-  // const triggerRef = useRef(null)
-  // const [trigger, setTrigger] = useState(triggerRef.current)
   // useEffect(() => {
-  //   setTrigger(triggerRef.current)
+  //   const history = historyRef.current
+  //   const historyImgWrap = historyImgWrapRef.current
+
+  //   if (history && historyImgWrap) {
+  //     gsap.to(historyImgWrap, {
+  //       position: 'fixed',
+  //       scrollTrigger: {
+  //         trigger: history,
+  //         start: 'top top',
+  //         end: 'bottom bottom',
+  //         scrub: true,
+  //         markers: true,
+  //       },
+  //       onComplete: () => {
+  //         // history.style.position = 'absolute'
+  //       },
+  //     })
+  //   }
   // }, [])
 
   return (
-    <div className={`${styles.history} historyTrigger`} ref={ref}>
+    // <div className={`${styles.history} historyTrigger`} ref={historyRef}>
+    <div className={`${styles.history} historyTrigger`}>
       <Container>
         <div className={styles.historyWrap}>
           <AboutTitle children="Начало" />

@@ -1,3 +1,23 @@
+.historySubtitleWrap {
+  max-width: 500px;
+  width: 100%;
+
+  @media screen and (max-width: 1440px) {
+    max-width: 400px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    max-width: 300px;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 500px;
+  }
+
+  @media screen and (max-width: 375px) {
+    max-width: 343px;
+  }
+}
 
 .historySubtitle {
   display: block;
@@ -5,8 +25,9 @@
   font-size: 24px;
   line-height: 28px;
   max-width: 500px;
+  width: 100%;
   position: static;
-  top: 51.5vh;
+  top: 43vh;
   left: 2.2vw;
 
   @media screen and (max-width: 1440px) {
