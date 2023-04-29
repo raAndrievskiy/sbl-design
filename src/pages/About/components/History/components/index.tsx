@@ -1,6 +1,5 @@
 import { Subtitle } from './Subtitle/Subtitle'
-import { Images } from './Images/Images'
 import { AboutTitle } from './AboutTitle/AboutTitle'
-import { Description } from './Description/Description'
+import { ImageGallery } from './ImageGallery/ImageGallery'
 
-export { Subtitle, Images, AboutTitle, Description }
+export { Subtitle, AboutTitle, ImageGallery }

@@ -11,16 +11,8 @@ import styles from './styles.module.scss'
 gsap.registerPlugin(ScrollTrigger)
 
 export const AnimationTextAndImage: React.FC = () => {
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const hee = ref.current
-    // console.log('1', hee?.getBoundingClientRect().y)
-    console.log('1', hee?.clientHeight)
-  }, [])
-
   return (
-    <div className={styles.premiumTextWrap} ref={ref}>
+    <div className={styles.premiumTextWrap}>
       <Container>
         <div className={`${styles.premiumText} premiumTextTrigger`}>
           <Tween
@@ -28,13 +20,11 @@ export const AnimationTextAndImage: React.FC = () => {
               color: '#F6F6F6',
               scrollTrigger: {
                 trigger: '.premiumTextTrigger',
-                start: 'top+=90vh 100vh',
+                start: 'top 100vh',
                 // start: 'top 100vh',
                 end: 'bottom+=40vh 100%',
                 // end: 'bottom 100%',
                 scrub: true,
-                // pin: '.premiumTextTrigger',
-                markers: true,
               },
             }}
             stagger={0.1}>

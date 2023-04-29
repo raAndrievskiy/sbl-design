@@ -13,7 +13,7 @@ export const Premium: React.FC = () => {
   return (
     <>
       <ImageBackground text="Premium" />
-      {/* <AnimationTextAndImage /> */}
+      <AnimationTextAndImage />
       <Icons />
       <Slider />
       <QualityWork />

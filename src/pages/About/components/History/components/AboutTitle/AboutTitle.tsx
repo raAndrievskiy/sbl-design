@@ -35,13 +35,13 @@ export const AboutTitle: React.FC<TitleProps> = ({ children }) => {
       <Tween
         target={1}
         to={{
-          xPercent: -110,
+          xPercent: 0,
           scrollTrigger: {
             trigger: '.historyTrigger',
-            start: 'top top',
-            end: 'bottom+=264vh bottom',
-            scrub: 1,
-            // markers: true,
+            start: 'top-=500vh top',
+            endTrigger: '.aboutTitle',
+            end: 'bottom bottom',
+            scrub: 2,
           },
         }}
       />

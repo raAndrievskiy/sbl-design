@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { Container, LineWhite } from '../../../../components'
 import useWindowSize from '../../../../hook/useWindowSize'
 import styles from './styles.module.scss'
+import { Link } from 'react-router-dom'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -67,7 +68,7 @@ export const About: React.FC = () => {
                     : `h3 ${styles.aboutTitle} ${styles.aboutTitleHidden}`
                 }
                 ref={aboutTitleRef}>
-                Мы знаем как воплатить вашу идею в жизнь
+                Мы знаем как воплотить вашу идею в жизнь
               </h3>
             </Tween>
           </Reveal>
@@ -80,7 +81,7 @@ export const About: React.FC = () => {
           </span>
           <>
             <LineWhite />
-            <div className={styles.elevator}>
+            <Link to="/premium" className={styles.elevator}>
               <Reveal repeat>
                 <Tween
                   to={{
@@ -98,9 +99,9 @@ export const About: React.FC = () => {
                   </span>
                 </Tween>
               </Reveal>
-            </div>
+            </Link>
             <LineWhite />
-            <div className={styles.elevator}>
+            <Link to="/special" className={styles.elevator}>
               <Reveal repeat>
                 <Tween
                   to={{
@@ -118,7 +119,7 @@ export const About: React.FC = () => {
                   </span>
                 </Tween>
               </Reveal>
-            </div>
+            </Link>
             <LineWhite />
           </>
         </div>

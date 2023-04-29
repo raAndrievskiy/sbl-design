@@ -3,7 +3,7 @@
 }
 
 .historyWrap {
-  // position: relative;
+  position: relative;
   padding-top: 350px;
 
   @media screen and (max-width: 1440px) {
@@ -20,17 +20,8 @@
 .historyImgWrap {
   display: flex;
   justify-content: space-between;
-  // position: relative;
   bottom: 0;
   left: 0;
-}
-
-.historyImg {
-
-}
-
-.imgWrap {
-  // height: 100vh;
 }
 
 .imgBlock {
