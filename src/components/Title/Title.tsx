@@ -25,7 +25,7 @@ export const Title: React.FC<TitleProps> = ({ children }) => {
           yPercent: 0,
           scrollTrigger: {
             trigger: '.title',
-            start: width > 1024 ? 'top-=780vh 10%' : 'top-=350% 10%',
+            start: width > 1024 ? 'top-=780vh 10%' : 'top-=750vh 10%',
             end: 'bottom-=300vh bottom',
             scrub: 0.3,
           },

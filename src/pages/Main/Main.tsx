@@ -9,11 +9,14 @@ import {
   BubblesInfo,
   About,
   Portfolio,
+  PortfolioMobile,
 } from './components'
+import useWindowSize from '../../hook/useWindowSize'
 
 export const Main: React.FC = () => {
   const loader = useAppSelector(state => state.app.loader)
   const dispatch = useDispatch()
+  const [width] = useWindowSize()
 
   useEffect(() => {
     setTimeout(() => dispatch(setLoader(false)), 0)
@@ -32,7 +35,7 @@ export const Main: React.FC = () => {
       <FullScreenVideoText />
       <BubblesInfo />
       <About />
-      <Portfolio />
+      {width > 1024 ? <Portfolio /> : <PortfolioMobile />}
     </>
   )
 }

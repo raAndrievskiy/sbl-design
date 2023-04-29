@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-import { Container, Title } from '../../../../components'
+import { Container } from '../../../../components'
 import { AboutTitle, ImageGallery, Subtitle } from './components'
 import styles from './styles.module.scss'
 

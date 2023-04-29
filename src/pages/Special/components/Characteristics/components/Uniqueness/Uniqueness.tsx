@@ -2,11 +2,14 @@ import React from 'react'
 import { CharacteristicsCircleIcon } from '../../../../../../assets/icons'
 
 import uniqueElevatorImg from '../../../../../../assets/images/special/characteristics/uniqueElevator.png'
+import useWindowSize from '../../../../../../hook/useWindowSize'
 import styles from './styles.module.scss'
 
 export const Uniqueness: React.FC = () => {
+  const [width] = useWindowSize()
+
   return (
-    <div className={styles.characteristics}>
+    <div className={`${styles.characteristics} characteristics`}>
       <div className={styles.characteristicsText}>
         <span className="specialTitle">Уникальность</span>
         <span className={styles.characteristicsDescription}>
@@ -21,7 +24,6 @@ export const Uniqueness: React.FC = () => {
             <CharacteristicsCircleIcon
               className={styles.loadedCircle}
               svgDrawTo={0.4}
-              startTrigger="960vh"
             />
             <div className={styles.circle}>
               <span className={styles.circleText}>2.5м</span>

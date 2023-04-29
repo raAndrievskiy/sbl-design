@@ -3,7 +3,13 @@
   width: 328px;
   height: 248.5px;
 
-  @media screen and (max-width: 1440px) {}
+  @media screen and (max-width: 1440px) {
+
+    // svg {
+    //   width: 100px;
+    //   h100
+    // }
+  }
   
   @media screen and (max-width: 1024px) {
     
@@ -19,14 +25,17 @@
       margin: 0 80px;
     }
   }
+
 }
 
 .iconText {
   position: absolute;
   left: 0;
-  bottom: -120px;
+  bottom: -220px;
 
-  @media screen and (max-width: 1440px) {}
+  @media screen and (max-width: 1440px) {
+    bottom: -120px;
+  }
   
   @media screen and (max-width: 1024px) {}
 
@@ -37,13 +46,13 @@
 
 .iconTitle {
   font-weight: 400;
-  font-size: 72px;
-  line-height: 85px;
+  font-size: 3.75vw;
+  line-height: 4.43vw;
   text-transform: uppercase;
 
   @media screen and (max-width: 1440px) {
-    font-size: 58px;
-    line-height: 69px;
+    font-size: 4.03vw;
+    line-height: 4.79vw;
   }
   
   @media screen and (max-width: 1024px) {
@@ -54,12 +63,12 @@
 
 .iconDescription {
   font-weight: 300;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 1.25vw;
+  line-height: 1.46vw;
 
   @media screen and (max-width: 1440px) {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.39vw;
+    line-height: 1.67vw;
   }
   
   @media screen and (max-width: 1024px) {

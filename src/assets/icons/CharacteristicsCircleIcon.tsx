@@ -9,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger)
 export const CharacteristicsCircleIcon = ({
   className,
   svgDrawTo,
-  startTrigger,
 }: CharacteristicsCircleIconProps) => {
   const [width] = useWindowSize()
 
@@ -28,7 +27,8 @@ export const CharacteristicsCircleIcon = ({
         to={{
           svgDraw: svgDrawTo,
           scrollTrigger: {
-            start: `${startTrigger} 100vh`,
+            trigger: '.characteristics',
+            start: `top 100vh`,
             end: '80% 100%',
           },
         }}>
