@@ -24,8 +24,8 @@ export const locationData: LocationDataType[] = [
 ]
 
 export const navLinkData: LinkDataType[] = [
-  { id: 1, navLink: 'Premium', to: '/' },
-  { id: 2, navLink: 'Special', to: '/' },
-  { id: 3, navLink: 'О компании', to: '/' },
+  { id: 1, navLink: 'Premium', to: '/premium' },
+  { id: 2, navLink: 'Special', to: '/special' },
+  { id: 3, navLink: 'О компании', to: '/about' },
   { id: 4, navLink: 'Контакты', to: '/' },
 ]

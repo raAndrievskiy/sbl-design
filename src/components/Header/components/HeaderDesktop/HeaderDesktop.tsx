@@ -1,20 +1,38 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 import { Logo } from '../../../../assets/icons'
 import { Container } from '../../..'
+import useWindowSize from '../../../../hook/useWindowSize'
 import styles from './styles.module.scss'
 
 export const HeaderDesktop: React.FC = () => {
+  const [width] = useWindowSize()
+
+  const location = useLocation()
+
+  const scrollToContacts = () => {
+    if (location.pathname === '/') {
+      document.querySelector('#contacts')?.scrollIntoView({
+        behavior: 'smooth',
+      })
+    } else {
+      setTimeout(() => {
+        document.querySelector('#contacts')?.scrollIntoView({
+          behavior: 'smooth',
+        })
+      }, 0)
+      location.pathname = '/'
+    }
+  }
+
   return (
     <header className={styles.headerWrap}>
       <Container>
         <div className={styles.header}>
-          <div className={styles.logoWrap}>
-            <NavLink to="/" className={styles.logo}>
-              <Logo width={120} height={23} />
-            </NavLink>
-          </div>
+          <NavLink to="/" className={styles.logo}>
+            <Logo width={width > 1440 ? 120 : 102} height={23} />
+          </NavLink>
           <div className={styles.headerLink}>
             <div className={styles.linkWrap}>
               <NavLink to="/premium" className={`${styles.link} color-white`}>
@@ -28,7 +46,10 @@ export const HeaderDesktop: React.FC = () => {
               <NavLink to="/about" className={`${styles.link} color-white`}>
                 О компании
               </NavLink>
-              <NavLink to="/" className={`${styles.link} color-white`}>
+              <NavLink
+                to="/"
+                className={`${styles.link} color-white`}
+                onClick={scrollToContacts}>
                 Контакты
               </NavLink>
             </div>

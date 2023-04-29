@@ -25,7 +25,7 @@ export const HeaderMobile: React.FC = () => {
               to="/"
               className={styles.logo}
               onClick={() => setShowBurger(false)}>
-              <Logo width={120} height={23} />
+              <Logo width={102} height={24} />
             </NavLink>
           </div>
           <div

@@ -6,7 +6,7 @@ import styles from './styles.module.scss'
 
 export const Footer: React.FC = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="contacts">
       <Container>
         <Info />
         <Contacts />
