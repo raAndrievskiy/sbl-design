@@ -27,7 +27,7 @@ export const Title: React.FC<TitleProps> = ({ children }) => {
             trigger: '.title',
             start: width > 1024 ? 'top-=780vh 10%' : 'top-=750vh 10%',
             end: 'bottom-=300vh bottom',
-            scrub: 0.3,
+            scrub: 1,
           },
         }}
       />
@@ -39,7 +39,7 @@ export const Title: React.FC<TitleProps> = ({ children }) => {
             trigger: '.title',
             start: 'top-=300vh 10%',
             end: 'bottom+=264vh bottom',
-            scrub: 0.3,
+            scrub: 1,
           },
         }}
       />
