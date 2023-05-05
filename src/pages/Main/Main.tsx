@@ -19,7 +19,7 @@ export const Main: React.FC = () => {
   const [width] = useWindowSize()
 
   useEffect(() => {
-    setTimeout(() => dispatch(setLoader(false)), 4000)
+    setTimeout(() => dispatch(setLoader(false)), 0)
     if (loader) {
       document.body.style.overflow = 'hidden'
     } else {
