@@ -1,4 +1,6 @@
 .lineWhite {
   border-bottom: 1px solid #F6F6F6;
   width: 0;
+  position: relative;
+  z-index: 3;
 }

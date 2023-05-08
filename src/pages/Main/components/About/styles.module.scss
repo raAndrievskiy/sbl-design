@@ -19,7 +19,7 @@
 
 .about {
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .circleTurquoise {
@@ -30,15 +30,16 @@
   position: absolute;
   top: -16%;
   left: 0;
-  z-index: -1;
+  z-index: 2;
 }
 
 .aboutTitle {
   max-width: 1053px;
   padding-bottom: 24px;
   transform: translate(0, -30px);
-  -webkit-transition: 1.2s;
   transition: 1.2s;
+  position: relative;
+  z-index: 3;
 
   @media screen and (max-width: 1440px) {
     max-width: 851px;
@@ -62,7 +63,6 @@
 }
 
 .aboutTitleHidden {
-  -webkit-transition: 0;
   transition: 0;
   opacity: 0;
 }
@@ -76,6 +76,8 @@
   margin-left: auto;
   padding-top: 192px;
   padding-bottom: 42vh;
+  position: relative;
+  z-index: 3;
 
   @media screen and (max-width: 1440px) {
     padding-top: 112px;
@@ -102,6 +104,8 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 32px 0 64px;
+  position: relative;
+  z-index: 3;
 
   @media screen and (max-width: 1440px) {
     padding: 16px 0 36px;

@@ -17,8 +17,8 @@ export const BubblesInfo: React.FC = () => {
     <div className={styles.bubbles}>
       <Container>
         <span className={`subtitle ${styles.bubblesDescription}`}>
-          Разрабатывая подобные идеи ты входишь в них с головой и со всем
-          вниманием к процессу не ожидая ничего взамен.
+          Внедряя передовые технологии в области лифтостроения мы предоставляем
+          Заказчику решение задач «под ключ», на самом высоком уровне.
         </span>
         <div className={`${styles.bubblesIconWrap} bubblesTrigger`}>
           <BubblesIcon className={styles.bubblesIcon} />
