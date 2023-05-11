@@ -27,11 +27,13 @@
   
   @media screen and (max-width: 1024px) {}
 
-  @media screen and (max-width: 768px) {}
-
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
     flex-wrap: nowrap;
+  }
+
+  @media screen and (max-width: 375px) {
+    
   }
 }
 
@@ -39,14 +41,13 @@
 .statisticsBlock {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 50%;
-  padding: 72px 122px 106px 40px;
+  padding: 72px 46px 106px 40px;
   position: relative;
   border: 1px solid #F6F6F6;
 
   @media screen and (max-width: 1440px) {
-    padding: 40px 32px 72px;
+    padding: 40px 10px 72px 32px;
   }
   
   @media screen and (max-width: 1024px) {
@@ -55,40 +56,42 @@
 
   @media screen and (max-width: 768px) {
     padding: 24px 16px 40px;
+    width: 100%;
   }
 
   @media screen and (max-width: 375px) {
-    width: 100%;
   }
 }
 
 .blockTitle {
+  height: 12.71vw;
   font-weight: 300;
-  font-size: 4.5vw;
-  line-height: 5.42vw;
+  font-size: 4.38vw;
+  line-height: 5.16vw;
   padding-bottom: 46px;
 
   @media screen and (max-width: 1440px) {
-    font-size: 5vw;
-    line-height: 6vw;
+    font-size: 4.58vw;
+    line-height: 5.42vw;
     padding-bottom: 40px;
   }
   
   @media screen and (max-width: 1024px) {
-    font-size: 4.7vw;
-    line-height: 5.6vw;
+    
+    font-size: 4.30vw;
+    line-height: 5.08vw;
     padding-bottom: 35px;
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 4.2vw;
-    line-height: 4.5vw;
+    font-size: 32px;
+    line-height: 38px;
+    height: auto;
     padding-bottom: 28px;
   }
 
   @media screen and (max-width: 375px) {
-    font-size: 32px;
-    line-height: 38px;
+    
   }
 }
 
