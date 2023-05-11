@@ -44,18 +44,19 @@ export const History: React.FC = () => {
           </div>
         ) : (
           <div className={styles.historyWrap}>
-            <AboutTitle children="Начало" />
+            {/* <AboutTitle children="Начало" />
             <div className={styles.historyImgWrap}>
-              <Subtitle
-                children="Разрабатывая подобные идеи ты входишь в них с головой и со всем
-            вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные.
-            Разрабатывая подобные идеи ты входишь в них с головой и со всем
-            вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные."
-              />
+              <span className={styles.subtitle}>
+                Разрабатывая подобные идеи ты входишь в них с головой и со всем
+                вниманием к процессу не ожидая ничего взамен. Разрабатывая
+                подобные. Разрабатывая подобные идеи ты входишь в них с головой
+                и со всем вниманием к процессу не ожидая ничего взамен.
+                Разрабатывая подобные.
+              </span>
               <div className={styles.imgBlock}>
                 <ImageGallery images={images} descriptions={texts} />
               </div>
-            </div>
+            </div> */}
           </div>
         )}
       </Container>

@@ -18,8 +18,8 @@ export const locationData: LocationDataType[] = [
   },
   {
     id: 2,
-    label: 'Производство',
-    address: 'г. Лобня, 12-й стоякоский проспект, д. 9',
+    label: '',
+    address: '',
   },
 ]
 

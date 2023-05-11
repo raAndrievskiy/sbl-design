@@ -4,24 +4,12 @@ $font-size-lg: 5vw;
 $font-size-sm: 5.6vw;
 $font-size-xs: 5.4vw;
 
-$line-height-xxxl: 4.43vw;
-$line-height-xl: 4.8vw;
+$line-height-xxxl: 5.2vw;
+$line-height-xl: 5.2vw;
 $line-height-lg: 5.8vw;
 $line-height-sm: 6.7vw;
 $line-height-xs: 6.4vw;
 
-
-// @media screen and (max-width: 1440px) {
-
-// }
-
-// @media screen and (max-width: 1024px) {
-
-// }
-
-// @media screen and (max-width: 768px) {
-  
-// }
 
 .main {
   position: relative;
@@ -64,7 +52,7 @@ $line-height-xs: 6.4vw;
 }
 
 .textBlock {
-  padding-top: 12px;
+  
   
   &:nth-of-type(1) {
     .text {
@@ -164,21 +152,6 @@ $line-height-xs: 6.4vw;
     }
   }
 
-  @media screen and (max-width: 1440px) {
-    padding-top: 14px;
-  }
-
-  @media screen and (max-width: 1024px) {
-    padding-top: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    padding-top: 4px;
-  }
-
-  @media screen and (max-width: 375px) {
-    padding-top: 8px;
-  }
   
 }
 
@@ -186,27 +159,36 @@ $line-height-xs: 6.4vw;
   font-size: $font-size-xxxl;
   line-height: $line-height-xxxl;
   position: relative;
+  margin-top: 12px;
   color: #282728;
   text-transform: uppercase;
   
   @media screen and (max-width: 1440px) {
+     margin-top: 14px;
     font-size: $font-size-xl;
     line-height: $line-height-xl;
+    
   }
 
   @media screen and (max-width: 1024px) {
+     margin-top: 8px;
     font-size: $font-size-lg;
     line-height: $line-height-lg;
+    
   }
 
   @media screen and (max-width: 768px) {
+     margin-top: 4px;
     font-size: $font-size-sm;
     line-height: $line-height-sm;
+    
     font-weight: 250;
   }
 
   @media screen and (max-width: 375px) {
+     margin-top: 8px;
     font-size: $font-size-xs;
     line-height: $line-height-xs;
+    
   }
 }
