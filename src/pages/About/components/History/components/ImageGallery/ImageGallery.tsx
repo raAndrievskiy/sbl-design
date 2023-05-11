@@ -1,6 +1,7 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import { useNavigate } from 'react-router'
 
 import styles from './styles.module.scss'
 
@@ -17,8 +18,11 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 }) => {
   const imageRefs = useRef<(HTMLImageElement | any)[]>([])
   const textRefs = useRef<(HTMLDivElement | null)[]>([])
+  const navigate = useNavigate()
+  const [refresh, setRefresh] = useState(true)
 
   useEffect(() => {
+    setInterval(() => setRefresh(false), 500)
     const imageTweens = imageRefs.current.map(imageRef => {
       const tl = gsap.timeline({
         scrollTrigger: {
