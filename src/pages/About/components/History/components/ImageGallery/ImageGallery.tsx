@@ -15,7 +15,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
   descriptions,
 }) => {
-  const imageRefs = useRef<(HTMLImageElement | null)[]>([])
+  const imageRefs = useRef<(HTMLImageElement | any)[]>([])
   const textRefs = useRef<(HTMLDivElement | null)[]>([])
 
   useEffect(() => {
@@ -44,6 +44,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
         },
       })
 
+      tl.to(textRef, { opacity: 0, yPercent: -20, ease: 'none' }, 0)
       tl.to(
         textRefs.current[index + 1],
         { opacity: 1, yPercent: 0, ease: 'none' },
