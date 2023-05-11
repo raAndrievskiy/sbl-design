@@ -1,29 +1,41 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import { useNavigate } from 'react-router'
+import historyImg01 from '../../../../../../assets/images/about/historyImg01.png'
+import historyImg02 from '../../../../../../assets/images/about/historyImg02.png'
+import historyImg03 from '../../../../../../assets/images/about/historyImg03.png'
 
 import styles from './styles.module.scss'
 
 gsap.registerPlugin(ScrollTrigger)
 
-interface ImageGalleryProps {
-  images: string[]
-  descriptions: string[]
+type ImageGalleryProps = {
+  image: any
+  text: string
 }
 
-export const ImageGallery: React.FC<ImageGalleryProps> = ({
-  images,
-  descriptions,
-}) => {
-  const imageRefs = useRef<(HTMLImageElement | any)[]>([])
+const imagesData: ImageGalleryProps[] = [
+  {
+    image: historyImg01,
+    text: 'Разрабатывая подобные идеи ты входишь в них с головой и со всем вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные. Разрабатывая подобные идеи.',
+  },
+  {
+    image: historyImg02,
+    text: 'Разрабатывая подобные идеи ты входишь в них с головой и со всем вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные. Разрабатывая подобные идеи.',
+  },
+  {
+    image: historyImg03,
+    text: 'Разрабатывая подобные идеи ты входишь в них с головой и со всем вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные. Разрабатывая подобные идеи.',
+  },
+]
+
+export const ImageGallery: React.FC = () => {
+  const imageRefs = useRef<(HTMLImageElement | null)[]>([])
   const textRefs = useRef<(HTMLDivElement | null)[]>([])
-  const navigate = useNavigate()
-  const [refresh, setRefresh] = useState(true)
 
   useEffect(() => {
-    setInterval(() => setRefresh(false), 500)
     const imageTweens = imageRefs.current.map(imageRef => {
+      console.log('imageRef: ', imageRef)
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: imageRef,
@@ -49,11 +61,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
       })
 
       tl.to(textRef, { opacity: 0, yPercent: -20, ease: 'none' }, 0)
-      tl.to(
-        textRefs.current[index + 1],
-        { opacity: 1, yPercent: 0, ease: 'none' },
-        0,
-      )
 
       return tl
     })
@@ -62,14 +69,15 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
       imageTweens.forEach(tween => tween.kill())
       textTweens.forEach(tween => tween.kill())
     }
-  }, [images, descriptions])
+  }, [])
 
   return (
     <div>
-      {images.map((image, index) => (
-        <div key={index} style={{ display: 'flex' }}>
+      {imagesData.map((data, index) => (
+        <div style={{ display: 'flex' }} key={index}>
           <img
-            src={image}
+            src={data.image}
+            key={index}
             className={styles.elevator}
             alt=""
             ref={ref => (imageRefs.current[index] = ref)}
@@ -77,7 +85,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
           <div
             ref={ref => (textRefs.current[index] = ref)}
             className={styles.imgDescription}>
-            {descriptions[index]}
+            {data.text}
           </div>
         </div>
       ))}
