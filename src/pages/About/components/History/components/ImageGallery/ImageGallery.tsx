@@ -35,7 +35,6 @@ export const ImageGallery: React.FC = () => {
 
   useEffect(() => {
     const imageTweens = imageRefs.current.map(imageRef => {
-      console.log('imageRef: ', imageRef)
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: imageRef,
