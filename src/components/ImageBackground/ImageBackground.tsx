@@ -2,7 +2,9 @@ import React from 'react'
 import { gsap } from 'gsap'
 import { Tween, ScrollTrigger } from 'react-gsap'
 
-import elevatorMain from '../../assets/images/special/specialBg.png'
+import premiumBg from '../../assets/images/premiumBg.png'
+import specialBg from '../../assets/images/specialBg.jpeg'
+
 import styles from './styles.module.scss'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -23,7 +25,7 @@ export const ImageBackground: React.FC<ImageBackgroundTypes> = ({ text }) => {
         }}
         duration={1.5}>
         <img
-          src={elevatorMain}
+          src={text === 'Special' ? specialBg : premiumBg}
           alt=""
           className={`${styles.typeElevatorMain} typeElevatorMainTrigger`}
         />
