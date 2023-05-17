@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux'
 import { Preloader } from '../../components'
 import { useAppSelector } from '../../hook/app'
 import { setLoader } from '../../store/appSlice'
+import premiumBg from '../../assets/images/premiumBg.png'
+import specialBg from '../../assets/images/specialBg.jpeg'
 
 import {
   FullScreenVideoText,

@@ -5,7 +5,6 @@ import { Footer, Header, Preloader } from './components'
 import { Main, Premium, Special, About } from './pages'
 
 const App: React.FC = () => {
-
   return (
     <BrowserRouter>
       <Header />
