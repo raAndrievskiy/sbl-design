@@ -22,7 +22,9 @@
 
 .premiumText {
   max-width: 1155px;
+  width: 100%;
   padding: 64px 0 440px;
+  font-weight: 500;
 
   @media screen and (max-width: 1440px) {
     max-width: 858px;
@@ -44,20 +46,22 @@
 }
 
 .text {
+  font-family: "MazzardH-Medium";
   display: inline-block;
   color: #9A9A9A;
   font-weight: 500;
-  font-size: 100px;
-  line-height: 118px;
+  font-size: 5.21vw;
+  line-height: 6.15vw;
+  margin-right: 24px;
 
   @media screen and (max-width: 1440px) {
-    font-size: 80px;
-    line-height: 95px;
+    font-size: 5.56vw;
+    line-height: 6.60vw;
   }
   
   @media screen and (max-width: 1024px) {
-    font-size: 64px;
-    line-height: 76px;
+    font-size: 6.25vw;
+    line-height: 6.25vw;
   }
 
   @media screen and (max-width: 768px) {
@@ -66,6 +70,26 @@
   }
 
   @media screen and (max-width: 375px) {}
+
+  // &:nth-child(12) {
+  //   margin-right: 17.4vw;
+  // }
+
+  // &:nth-child(20),
+  // &:nth-child(26),
+  // &:nth-child(33),
+  // &:nth-child(34),
+  // &:nth-child(38) {
+  //   margin-right: 24px;
+  // }
+  
+  // &:nth-child(24) {
+  //   margin-right: 15.26vw;
+  // }
+
+  // &:nth-child(37) {
+  //   margin-right: 200px;
+  // }
 }
 
 .premiumImages {

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { Tween, SplitChars } from 'react-gsap'
+import { Tween, SplitWords } from 'react-gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 import { Container } from '../../../../components'
@@ -21,21 +21,18 @@ export const AnimationTextAndImage: React.FC = () => {
               scrollTrigger: {
                 trigger: '.premiumTextTrigger',
                 start: 'top 100vh',
-                // start: 'top 100vh',
                 end: 'bottom+=40vh 100%',
-                // end: 'bottom 100%',
                 scrub: true,
               },
             }}
-            stagger={0.1}>
-            <SplitChars wrapper={<div className={styles.text} />}>
+            stagger={0.5}>
+            <SplitWords wrapper={<div className={styles.text} />}>
               Разрабатывая подобные идеи ты входишь в них с головой и со всем
               вниманием к процессу не ожидая ничего взамен разрабатывая
               подобные.
-            </SplitChars>
+            </SplitWords>
           </Tween>
         </div>
-        {/* <div className={styles.premiumImagesWrap}> */}
         <div className={styles.premiumImages}>
           <img src={elevatorImage1} className={styles.elevatorImage} alt="" />
           <img src={elevatorImage2} className={styles.elevatorImage} alt="" />
