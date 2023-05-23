@@ -3,23 +3,13 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import { Footer, Header, Preloader } from './components'
 import { Main, Premium, Special, About } from './pages'
-import ds from './assets/images/premiumBg.png'
+import premiumImg from './assets/images/premiumBg.png'
+import specialImg from './assets/images/specialBg.jpeg'
 
 const App: React.FC = () => {
   const loadImage = () => {
     const image = new Image()
-    image.src = ds
-
-    // Обработчик события загрузки изображения
-    image.onload = () => {
-      console.log(12)
-    }
-
-    // Обработчик события ошибки загрузки изображения
-    image.onerror = () => {
-      // Произошла ошибка загрузки изображения
-      // Можете выполнить дополнительные действия здесь
-    }
+    image.src = premiumImg && specialImg
   }
 
   // Вызов функции загрузки изображения
