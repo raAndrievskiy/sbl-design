@@ -27,9 +27,8 @@ export const AnimationTextAndImage: React.FC = () => {
           scrollTrigger: {
             trigger: '.premiumTextTrigger',
             start: 'top 100vh',
-            end: 'bottom+=40vh 100%',
-            scrub: true,
-            markers: true,
+            end: 'bottom 100%',
+            scrub: 2,
           },
         })
       }
