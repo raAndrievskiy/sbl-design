@@ -12,7 +12,6 @@ const App: React.FC = () => {
     image.src = premiumImg && specialImg
   }
 
-  // Вызов функции загрузки изображения
   loadImage()
   return (
     <BrowserRouter>
