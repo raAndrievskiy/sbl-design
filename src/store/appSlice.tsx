@@ -22,6 +22,11 @@ const appSlice = createSlice({
       }
     },
 
+    setReloadAbout(state, action) {
+      state.about = !state.about
+      state.about = action.payload
+    },
+
     setShowModal(state, action) {
       state.modal = !state.modal
       state.modal = action.payload
@@ -50,6 +55,7 @@ export const {
   setShowModal,
   setShowClientsModal,
   setLoader,
+  setReloadAbout,
   setThxModal,
 } = appSlice.actions
 
