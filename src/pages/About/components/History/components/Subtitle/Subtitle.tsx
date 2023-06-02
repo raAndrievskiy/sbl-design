@@ -12,14 +12,12 @@ type SubtitleProps = {
 export const Subtitle: React.FC<SubtitleProps> = ({ children }) => {
   const subtitleRef = useRef<HTMLSpanElement>(null)
   const subtitleWrapRef = useRef<HTMLDivElement>(null)
-  const [isPageLoaded, setIsPageLoaded] = useState(false)
 
   useEffect(() => {
     const subtitle = subtitleRef.current
     const subtitleWrap = subtitleWrapRef.current
-    console.log('subtitleWrap: ', subtitleWrap?.clientHeight)
 
-    if (subtitleWrap && subtitle && isPageLoaded) {
+    if (subtitleWrap && subtitle) {
       gsap.to(subtitle, {
         position: 'fixed',
         left: subtitle?.style.left,
@@ -28,7 +26,7 @@ export const Subtitle: React.FC<SubtitleProps> = ({ children }) => {
           start: 'top-=350vh top',
           end: 'bottom bottom',
           scrub: true,
-          markers: true,
+          // markers: true,
         },
         onComplete: () => {
           subtitle.style.position = 'absolute'
@@ -36,10 +34,6 @@ export const Subtitle: React.FC<SubtitleProps> = ({ children }) => {
         },
       })
     }
-  }, [isPageLoaded])
-
-  useEffect(() => {
-    setIsPageLoaded(true)
   }, [])
 
   return (
