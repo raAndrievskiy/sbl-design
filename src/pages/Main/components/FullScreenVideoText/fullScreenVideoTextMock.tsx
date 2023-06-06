@@ -20,13 +20,13 @@ export const fullScreenVideoTextMock = [
   {
     id: 4,
     x: '20%',
-    text: 'индивидуальных',
-    className: 'text-center',
+    text: 'индивидуальных дизайнерских',
+    className: 'text-right',
   },
   {
     id: 5,
-    x: '10%',
-    text: 'решений',
-    className: 'text-center',
+    x: '-20%',
+    text: 'и технологических решений',
+    className: 'text-left',
   },
 ]

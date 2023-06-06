@@ -14,7 +14,7 @@ export const locationData: LocationDataType[] = [
   {
     id: 1,
     label: 'Офис',
-    address: 'г. Москва, Проезд Северный, д. 12',
+    address: 'г. Москва, Варшавское ш. 148, БЦ РТС',
   },
   {
     id: 2,

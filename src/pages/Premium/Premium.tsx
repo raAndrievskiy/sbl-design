@@ -1,7 +1,13 @@
 import React, { useEffect } from 'react'
 
 import { ImageBackground } from '../../components'
-import { AnimationTextAndImage, Icons, QualityWork, Slider } from './components'
+import {
+  AnimationTextAndImage,
+  Icons,
+  Letter,
+  QualityWork,
+  Slider,
+} from './components'
 
 import styles from './styles.module.scss'
 
@@ -14,7 +20,8 @@ export const Premium: React.FC = () => {
     <>
       <ImageBackground text="Premium" />
       <AnimationTextAndImage />
-      <Icons />
+      {/* <Icons /> */}
+      <Letter />
       <Slider />
       <QualityWork />
     </>

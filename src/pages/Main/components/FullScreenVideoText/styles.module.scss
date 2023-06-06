@@ -72,7 +72,8 @@ $line-height-xs: 6.4vw;
     }
   }
 
-  &:nth-of-type(2) {
+  &:nth-of-type(2),
+  &:nth-of-type(4)  {
     .text {
       padding-right: 58px;
       font-style: italic;
@@ -92,7 +93,8 @@ $line-height-xs: 6.4vw;
     }
   }
 
-  &:nth-of-type(3) {
+  &:nth-of-type(3),
+  &:nth-of-type(5)  {
     .text {
       padding-left: 58px;
       font-style: italic;
@@ -112,45 +114,43 @@ $line-height-xs: 6.4vw;
     }
   }
 
-  &:nth-of-type(4) {
-    .text {
-      padding-right: 52px;
+  // &:nth-of-type(4) {
+  //   .text {
+  //     padding-left: 20.31vw;
 
-      @media screen and (max-width: 1440px) {
-        padding-right: 0;
-        padding-left: 3vw;
-      }
+  //     @media screen and (max-width: 1440px) {
+  //       padding-left: 16vw;
+  //     }
     
-      @media screen and (max-width: 1024px) {
-        padding-left: 0;
-        padding-right: 15vw;
-      }
+  //     @media screen and (max-width: 1024px) {
+  //       padding-left: 0;
+  //     }
     
-      @media screen and (max-width: 768px) {
-        padding-right: 20vw;
-      }
+  //     @media screen and (max-width: 768px) {
+  //       // padding-left: ;
+  //     }
     
-    }
-  }
+  //   }
+  // }
 
-  &:nth-of-type(5) {
-    .text {
-      padding-right: 22vw;
+  // &:nth-of-type(5) {
+  //   .text {
+  //     padding-right: 29vw;
 
-      @media screen and (max-width: 1440px) {
-        padding-right: 18vw;
-      }
+  //     @media screen and (max-width: 1440px) {
+  //       padding-right: 24vw;
+  //     }
     
-      @media screen and (max-width: 1024px) {
-        padding-right: 40vw;
-      }
+  //     @media screen and (max-width: 1024px) {
+  //       padding-right: 0;
+  //     }
     
-      @media screen and (max-width: 768px) {
-        padding-right: 49vw;
-      }
+  //     @media screen and (max-width: 768px) {
 
-    }
-  }
+  //     }
+
+  //   }
+  // }
 
   
 }

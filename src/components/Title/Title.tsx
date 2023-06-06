@@ -25,9 +25,9 @@ export const Title: React.FC<TitleProps> = ({ children }) => {
           yPercent: 0,
           scrollTrigger: {
             trigger: '.title',
-            start: width > 1024 ? 'top-=230% center' : 'top-=750vh center',
+            start: width > 1024 ? 'top-=150% center' : 'top-=750vh center',
             end: 'bottom-=100% center',
-            scrub: 0.3,
+            scrub: 0.5,
           },
         }}
       />
@@ -39,7 +39,7 @@ export const Title: React.FC<TitleProps> = ({ children }) => {
             trigger: '.title',
             start: 'top-=120% 10%',
             end: 'bottom+=90% bottom',
-            scrub: 0.3,
+            scrub: 0.5,
           },
         }}
       />

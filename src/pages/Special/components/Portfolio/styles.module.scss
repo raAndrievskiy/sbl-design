@@ -20,11 +20,11 @@
 .portfolioText {
   position: relative;
   margin-left: 13vw;
-  max-width: 750px;
+  max-width: 947px;
   margin-bottom: 46vw;
 
   @media screen and (max-width: 1440px) {
-    max-width: 627px;
+    max-width: 686px;
     margin-left: 8.41vw;
   }
   
@@ -72,7 +72,7 @@
 .previewImg1 {
   position: absolute;
   right: -29vw;
-  top: 0;
+  top: 60px;
   z-index: 1;
 
   @media screen and (max-width: 1440px) {

@@ -18,10 +18,9 @@ export const Quality: React.FC = () => {
       <div className={styles.characteristicsText}>
         <span className="specialTitle">Качество</span>
         <span className={styles.characteristicsDescription}>
-          Разрабатывая подобные идеи ты входишь в них с головой и со всем
-          вниманием к процессу не ожидая ничего взамен. Разрабатывая подобные
-          идеи ты входишь в них с головой и со всем вниманием к процессу не
-          ожидая ничего взамен.
+          Контроль на всех этапах производства, собственный конструкторский
+          отдел позволяют контролировать и адаптировать необходимые процессы и
+          решения.
         </span>
 
         <div className={styles.specifications}>
@@ -32,10 +31,10 @@ export const Quality: React.FC = () => {
               startTrigger="1800vh"
             />
             <div className={styles.circle}>
-              <span className={styles.circleText}>2.5м</span>
+              <span className={styles.circleText}>
+                с машинным и без машинного помещения
+              </span>
             </div>
-            <span className="color-grey">максимальная</span>
-            <span className={styles.infoText}>высота кабин</span>
           </div>
 
           <div className={styles.info}>
@@ -45,10 +44,10 @@ export const Quality: React.FC = () => {
               startTrigger="1800vh"
             />
             <div className={styles.circle}>
-              <span className={styles.circleText}>5т</span>
+              <span className={styles.circleText}>
+                автоматические и распашные двери
+              </span>
             </div>
-            <span className="color-grey">максимальная</span>
-            <span className={styles.infoText}>грузоподъёмность</span>
           </div>
         </div>
       </div>
