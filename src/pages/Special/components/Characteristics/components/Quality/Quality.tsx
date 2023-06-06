@@ -1,6 +1,6 @@
 import React from 'react'
 
-import qualityElevatorImg from '../../../../../../assets/images/special/characteristics/qualityElevator.png'
+import qualityElevatorImg from '../../../../../../assets/images/special/characteristics/qualityElevator.jpeg'
 import { CharacteristicsCircleIcon } from '../../../../../../assets/icons'
 import styles from './styles.module.scss'
 
