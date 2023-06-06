@@ -8,6 +8,31 @@ import styles from './styles.module.scss'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const words = [
+  'От',
+  'идеи,',
+  'до',
+  'воплощения:',
+  'Заказчик',
+  'в',
+  'процессе',
+  'согласования',
+  'выбирает',
+  'материал',
+  'и',
+  'цветовую',
+  'палитру',
+  'внутренней',
+  'отделки',
+  'кабины,',
+  'для',
+  'интеграции',
+  'дизайна',
+  'лифта',
+  'с',
+  'холлом.',
+]
+
 export const AnimationTextAndImage: React.FC = () => {
   const textRef = useRef<HTMLDivElement | null>(null)
   const [isPageLoaded, setIsPageLoaded] = useState(false)
@@ -45,31 +70,11 @@ export const AnimationTextAndImage: React.FC = () => {
         <div
           className={`${styles.premiumText} premiumTextTrigger`}
           ref={textRef}>
-          <span className={styles.text}>От</span>
-          <span className={styles.text}>идеи,</span>
-          <span className={styles.text}>до</span>
-          <span className={styles.text}>воплощения:</span>
-          <span className={styles.text}>Заказчик</span>
-          <span className={styles.text}>в</span>
-          <span className={styles.text}>процессе</span>
-          <span className={styles.text}>согласования</span>
-          <span className={styles.text}>выбрал</span>
-          <span className={styles.text}>более</span>
-          <span className={styles.text}>теплую</span>
-          <span className={styles.text}>расцветку</span>
-          <span className={styles.text}>стекла</span>
-          <span className={styles.text}>для</span>
-          <span className={styles.text}>внутренней</span>
-          <span className={styles.text}>отделки</span>
-          <span className={styles.text}>кабины,</span>
-          <span className={styles.text}>чтобы</span>
-          <span className={styles.text}>лифт</span>
-          <span className={styles.text}>гармонично</span>
-          <span className={styles.text}>вписывался</span>
-          <span className={styles.text}>в</span>
-          <span className={styles.text}>интерьер</span>
-          <span className={styles.text}>холла</span>
-          <span className={styles.text}>.</span>
+          {words.map((word, index) => (
+            <span key={index} className={styles.text}>
+              {word}
+            </span>
+          ))}
         </div>
         <div className={styles.premiumImages}>
           <img src={elevatorImage1} className={styles.elevatorImage} alt="" />
