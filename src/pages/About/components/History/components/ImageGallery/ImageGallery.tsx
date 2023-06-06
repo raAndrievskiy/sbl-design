@@ -59,7 +59,7 @@ export const ImageGallery: React.FC = () => {
         },
       })
 
-      tl.to(textRef, { opacity: 0, yPercent: -20, ease: 'none' }, 0)
+      tl.to(textRef, { yPercent: -20, ease: 'none' }, 0)
 
       return tl
     })
