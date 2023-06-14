@@ -21,6 +21,10 @@ export const Main: React.FC = () => {
   const [width] = useWindowSize()
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
     setTimeout(() => dispatch(setLoader(false)), 0)
     if (loader) {
       document.body.style.overflow = 'hidden'
@@ -28,8 +32,6 @@ export const Main: React.FC = () => {
       document.body.style.overflow = 'visible'
     }
   })
-
-  window.scrollTo(0, 0)
 
   return (
     <>

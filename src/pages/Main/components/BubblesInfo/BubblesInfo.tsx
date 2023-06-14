@@ -18,7 +18,7 @@ export const BubblesInfo: React.FC = () => {
       <Container>
         <span className={`subtitle ${styles.bubblesDescription}`}>
           Внедряя передовые технологии в области лифтостроения мы предоставляем
-          Заказчику решение задач «под ключ», на самом высоком уровне.
+          Заказчику решение задач «под ключ» на самом высоком уровне.
         </span>
         <div className={`${styles.bubblesIconWrap} bubblesTrigger`}>
           <BubblesIcon className={styles.bubblesIcon} />

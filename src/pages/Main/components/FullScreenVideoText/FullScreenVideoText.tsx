@@ -14,7 +14,13 @@ gsap.registerPlugin(ScrollTrigger)
 export const FullScreenVideoText: React.FC = () => {
   return (
     <div className={styles.main}>
-      <video loop autoPlay muted className={styles.video}>
+      <video
+        loop
+        autoPlay
+        muted
+        playsInline
+        preload="auto"
+        className={styles.video}>
         <source src={video} type={'video/mp4'} />
       </video>
       <div className={styles.textWrap}>

@@ -1,6 +1,5 @@
 .footerInfo {
   display: flex;
-  // width: 50%;
   max-width: 892px;
   margin-left: auto;
   justify-content: flex-end;
@@ -8,7 +7,6 @@
   padding-top: 100px;
   padding-bottom: 60px;
   padding-right: 16.73vw;
-
 
   @media screen and (max-width: 1440px) {
     padding-top: 80px;
@@ -28,12 +26,12 @@
     padding-right: 0;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 418px) {
     padding-top: 55px;
     padding-bottom: 40px;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 326px;
+    max-width: 100%;
   }
 }
 
@@ -46,10 +44,10 @@
   width: 204px;
 
   &:nth-child(1) {
-    padding-bottom: 32px;
+    // padding-bottom: 32px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 418px) {
     &:nth-child(2) {
       padding-bottom: 40px;
     }    
@@ -83,7 +81,7 @@
 
   @media screen and (max-width: 768px) {}
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 418px) {
     padding-left: 0;
   }
 }

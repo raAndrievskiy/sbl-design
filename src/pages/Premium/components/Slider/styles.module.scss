@@ -22,6 +22,9 @@
   overflow-x: hidden;
   height: 300vh;
   position: relative;
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
 }
 
 .slider {

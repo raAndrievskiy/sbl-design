@@ -8,6 +8,7 @@ import { useSnapshot } from 'valtio'
 
 import { state, damp } from './util'
 import styles from './styles.module.scss'
+import useWindowSize from '../../../../hook/useWindowSize';
 
 
 function Item({ index, position, scale, onPointerDown, className, c = new THREE.Color(), ...props }) {
@@ -57,6 +58,7 @@ function Items({ w = 0.7, gap = 0.15 }) {
 export const Slider = () => {
   const sliderWrapTriggerRef = useRef(null);
   const sliderTriggerRef = useRef(null);
+  const [width] =useWindowSize()
   
 
   useEffect(() => {
@@ -78,13 +80,25 @@ export const Slider = () => {
 
   }, []);
   return (
-    <div className={styles.sliderWrap} ref={sliderWrapTriggerRef}>
-      <div className={`${styles.slider} sliderWrap`} ref={sliderTriggerRef}>
-          <Canvas gl={{ alpha: false, antialias: true, stencil: false, depth: false }} linear={true} dpr={[1, 1.5]} 
-          onPointerMissed={() => (state.clicked = null)}>
-            <Items />
-          </Canvas>
+    <>
+    {width > 768 ? (
+      <div className={styles.sliderWrap} ref={sliderWrapTriggerRef}>
+        <div className={`${styles.slider} sliderWrap`} ref={sliderTriggerRef}>
+            <Canvas gl={{ alpha: false, antialias: true, stencil: false, depth: false }} linear={true} dpr={[1, 1.5]} 
+            onPointerMissed={() => (state.clicked = null)}>
+              <Items />
+            </Canvas>
+        </div>
       </div>
-    </div>
+    ) : (
+      <div className={styles.sliderWrap} >
+        <div className={`${styles.slider}`}>
+            <Canvas gl={{ alpha: false, antialias: true, stencil: false, depth: false }} linear={true} dpr={[1, 1.5]} 
+            onPointerMissed={() => (state.clicked = null)}>
+              <Items />
+            </Canvas>
+        </div>
+      </div>
+    )}</>
   )
 }

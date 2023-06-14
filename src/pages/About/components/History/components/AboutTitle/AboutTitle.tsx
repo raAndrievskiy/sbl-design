@@ -16,35 +16,71 @@ export const AboutTitle: React.FC<TitleProps> = ({ children }) => {
 
   return (
     <Timeline target={<h1 className="title aboutTitle">{children}</h1>}>
-      <Tween
-        target={0}
-        from={{
-          yPercent: 80,
-          xPercent: 90,
-        }}
-        to={{
-          yPercent: 0,
-          scrollTrigger: {
-            trigger: '.aboutTitle',
-            start: width > 1024 ? 'top-=780vh center' : 'top-=350% center',
-            end: 'bottom-=300vh bottom',
-            scrub: 0.3,
-          },
-        }}
-      />
-      <Tween
-        target={1}
-        to={{
-          xPercent: 0,
-          scrollTrigger: {
-            trigger: '.historyTrigger',
-            start: 'top-=500vh top',
-            endTrigger: '.aboutTitle',
-            end: 'bottom bottom',
-            scrub: 2,
-          },
-        }}
-      />
+      {width > 768 ? (
+        <>
+          <Tween
+            target={0}
+            from={{
+              yPercent: 80,
+              xPercent: 90,
+            }}
+            to={{
+              yPercent: 0,
+              scrollTrigger: {
+                trigger: '.aboutTitle',
+                start: width > 1024 ? 'top-=780vh center' : 'top-=350% center',
+                end: 'bottom-=300vh bottom',
+                scrub: 0.3,
+              },
+            }}
+          />
+          <Tween
+            target={1}
+            to={{
+              xPercent: 0,
+              scrollTrigger: {
+                trigger: '.historyTrigger',
+                start: 'top-=500vh top',
+                endTrigger: '.aboutTitle',
+                end: 'bottom bottom',
+                scrub: 2,
+              },
+            }}
+          />
+        </>
+      ) : (
+        <>
+          <Tween
+            target={0}
+            from={{
+              yPercent: 80,
+              xPercent: 90,
+            }}
+            to={{
+              yPercent: 0,
+              scrollTrigger: {
+                trigger: '.aboutTitle',
+                start: 'top-=500% center',
+                end: 'bottom-=300vh bottom',
+                scrub: 0.3,
+              },
+            }}
+          />
+          <Tween
+            target={1}
+            to={{
+              xPercent: 0,
+              scrollTrigger: {
+                trigger: '.historyTrigger',
+                start: 'top-=500vh top',
+                endTrigger: '.aboutTitle',
+                end: 'bottom bottom',
+                scrub: 2,
+              },
+            }}
+          />
+        </>
+      )}
     </Timeline>
   )
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 import { Logo } from '../../../../assets/icons'
 import { Container } from '../../../'
@@ -7,6 +7,7 @@ import styles from './styles.module.scss'
 
 export const HeaderMobile: React.FC = () => {
   const [showBurger, setShowBurger] = useState(false)
+  const location = useLocation()
 
   const openBurger = () => setShowBurger(!showBurger)
 
@@ -14,6 +15,23 @@ export const HeaderMobile: React.FC = () => {
     document.body.style.overflow = 'hidden'
   } else {
     document.body.style.overflow = 'visible'
+  }
+
+  const scrollToContacts = () => {
+    if (location.pathname === '/') {
+      setShowBurger(false)
+      document.querySelector('#contacts')?.scrollIntoView({
+        behavior: 'smooth',
+      })
+    } else {
+      setShowBurger(false)
+      location.pathname = '/'
+      setTimeout(() => {
+        document.querySelector('#contacts')?.scrollIntoView({
+          behavior: 'smooth',
+        })
+      }, 100)
+    }
   }
 
   return (
@@ -56,10 +74,7 @@ export const HeaderMobile: React.FC = () => {
           onClick={() => setShowBurger(false)}>
           О компании
         </NavLink>
-        <NavLink
-          to="/"
-          className={styles.link}
-          onClick={() => setShowBurger(false)}>
+        <NavLink to="/" className={styles.link} onClick={scrollToContacts}>
           Контакты
         </NavLink>
       </div>
